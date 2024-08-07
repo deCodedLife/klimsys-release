@@ -1,0 +1,7 @@
+{
+  "title": "Добавление",
+  "type": "add",
+  "object_scheme": "taskGroups",
+  "required_permissions": ["settings_task_themes"],
+  "required_modules": []
+}

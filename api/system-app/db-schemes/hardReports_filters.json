@@ -1,0 +1,28 @@
+{
+  "title": "Высоконагруженные отчеты (фильтры)",
+  "properties": [
+    {
+      "title": "ID отчета",
+      "article": "report_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Фильтр (артикул)",
+      "article": "filter_article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Фильтр (значение)",
+      "article": "filter_value",
+      "type": "varchar(255)",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

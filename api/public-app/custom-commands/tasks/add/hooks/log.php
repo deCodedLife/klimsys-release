@@ -1,0 +1,3 @@
+<?php
+
+$logDescription = "Добавлена задача";

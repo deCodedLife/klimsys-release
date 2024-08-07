@@ -1,0 +1,198 @@
+{
+  "title": "Задачи",
+  "table": "tasks",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Описание",
+      "article": "description",
+      "data_type": "string",
+      "field_type": "textarea",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Тема",
+      "article": "taskGroup_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": [],
+      "list_donor": {
+        "table": "taskGroups",
+        "properties_title": "title"
+      }
+    },
+    {
+      "title": "Срок выполнения",
+      "article": "deadline",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": false,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Дата и время последнего уведомления",
+      "article": "reminderDate",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Уведомлять каждые (мин)",
+      "article": "notifyEvery",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Статус",
+      "article": "status",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": [],
+      "custom_list": [
+        {
+          "title": "Поставлена",
+          "value": "set"
+        },
+        {
+          "title": "Завершена",
+          "value": "ended"
+        },
+        {
+          "title": "Просрочена",
+          "value": "overdue"
+        }
+      ]
+    },
+    {
+      "title": "Автор",
+      "article": "author_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "get"
+      ],
+      "require_in_commands": [],
+      "list_donor": {
+        "table": "users",
+        "properties_title": "last_name",
+        "select": [
+          [ "fio", "last_name", "first_name", "patronymic" ]
+        ]
+      }
+    },
+    {
+      "title": "Исполнитель",
+      "article": "performer_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": [],
+      "list_donor": {
+        "table": "users",
+        "properties_title": "last_name",
+        "select": [
+          [ "short_fio", "last_name", "first_name", "patronymic" ]
+        ],
+        "select_menu": [
+          [ "fio", "last_name", "first_name", "patronymic" ]
+        ]
+      }
+    },
+    {
+      "title": "Клиент",
+      "article": "client_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": [
+        "add"
+      ],
+      "list_donor": {
+        "table": "clients",
+        "properties_title": "last_name",
+        "select": [
+          [ "id" ],
+          [ "fio", "last_name", "first_name", "patronymic" ]
+        ],
+        "select_menu": [
+          [ "id" ],
+          [ "fio", "last_name", "first_name", "patronymic" ],
+          [ "phone", "second_phone" ]
+        ]
+      },
+      "is_disabled": false,
+      "search": "clients",
+      "annotation": "",
+      "is_hook": true
+    }
+  ],
+  "action_buttons": []
+}

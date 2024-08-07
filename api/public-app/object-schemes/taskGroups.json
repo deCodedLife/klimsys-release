@@ -1,0 +1,17 @@
+{
+  "title": "Темы задач",
+  "table": "taskGroups",
+  "is_trash": false,
+  "properties": [{
+    "title": "Название",
+    "article": "title",
+    "data_type": "string",
+    "field_type": "string",
+    "is_default_in_list": true,
+    "is_unique": true,
+    "is_autofill": true,
+    "use_in_commands": ["add", "update"],
+    "require_in_commands": ["add"]
+  }],
+  "action_buttons": []
+}

@@ -1,0 +1,233 @@
+{
+  "title": "Группы доступов",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "varchar(255)",
+      "is_required": "N",
+      "default": ""
+    },
+    {
+      "title": "ID родительской группы",
+      "article": "parent_id",
+      "type": "int",
+      "is_required": "N",
+      "default": 1
+    }
+  ],
+  "rows_key": "id",
+  "rows": [
+    {
+      "id": 1,
+      "title": "Основное",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 2,
+      "title": "Посещения",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 3,
+      "title": "Отчеты",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 4,
+      "title": "Задачи",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 5,
+      "title": "Услуги",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 6,
+      "title": "Касса (продажи)",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 7,
+      "title": "Закупки",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 8,
+      "title": "Поставщики",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 9,
+      "title": "Товары",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 10,
+      "title": "Категории",
+      "description": null,
+      "parent_id": 9
+    },
+    {
+      "id": 11,
+      "title": "Филиалы",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 12,
+      "title": "Кабинеты",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 13,
+      "title": "Документы",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 14,
+      "title": "Расходники",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 15,
+      "title": "Клиенты",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 16,
+      "title": "Группы",
+      "description": null,
+      "parent_id": 15
+    },
+    {
+      "id": 17,
+      "title": "Реклама",
+      "description": null,
+      "parent_id": 15
+    },
+    {
+      "id": 18,
+      "title": "Депозит",
+      "description": null,
+      "parent_id": 15
+    },
+    {
+      "id": 19,
+      "title": "Справочники",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 20,
+      "title": "Группы",
+      "description": null,
+      "parent_id": 19
+    },
+    {
+      "id": 21,
+      "title": "Расходы",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 22,
+      "title": "Группы",
+      "description": null,
+      "parent_id": 21
+    },
+    {
+      "id": 23,
+      "title": "Сотрудники",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 24,
+      "title": "Группы",
+      "description": null,
+      "parent_id": 23
+    },
+    {
+      "id": 25,
+      "title": "Специальности",
+      "description": null,
+      "parent_id": 23
+    },
+    {
+      "id": 26,
+      "title": "Роли",
+      "description": null,
+      "parent_id": 23
+    },
+    {
+      "id": 27,
+      "title": "История",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 28,
+      "title": "IP телефония",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 29,
+      "title": "Складские остатки",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 30,
+      "title": "Вкладки",
+      "description": null,
+      "parent_id": 23
+    },
+    {
+      "id": 34,
+      "title": "Акции",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 35,
+      "title": "Бонусы",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 36,
+      "title": "Электронная очередь",
+      "description": null,
+      "parent_id": null
+    },
+    {
+      "id": 37,
+      "title": "Настройки",
+      "description": null,
+      "parent_id": null
+    }
+  ]
+}

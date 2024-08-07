@@ -1,0 +1,7 @@
+{
+  "title": "Получить типы товаров",
+  "type": "get",
+  "object_scheme": "controlTypes",
+  "modules": [],
+  "no_limit": false
+}

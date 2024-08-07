@@ -1,0 +1,44 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Форма бонусов",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "clients",
+        "command": "update",
+        "data": {
+          "id": ":id"
+        },
+        "areas": [
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "bonus_action",
+                  "bonuses_replenishment"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "href": "clients",
+              "background": "dark",
+              "title": "Пополнить"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

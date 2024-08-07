@@ -1,0 +1,34 @@
+{
+  "title": "Типы фреона",
+  "table": "freonTypes",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "get",
+        "update"
+      ]
+    }
+  ],
+  "action_buttons": [{
+    "type": "script",
+    "settings": {
+      "title": "Удалить",
+      "background": "dark",
+      "icon": "trash",
+      "object": "freonTypes",
+      "command": "remove",
+      "data": {
+        "id": ":id"
+      }
+    }
+  }]
+}

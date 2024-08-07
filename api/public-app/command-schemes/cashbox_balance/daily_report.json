@@ -1,0 +1,8 @@
+{
+  "title": "Получить состояние кассы",
+  "type": "custom",
+  "object_scheme": "cashbox_balance",
+  "modules": [],
+  "permissions": [],
+  "no_limit": true
+}

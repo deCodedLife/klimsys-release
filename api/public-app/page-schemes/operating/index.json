@@ -1,0 +1,102 @@
+{
+  "required_permissions": [ "operating_section" ],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Операционная",
+      "type": "list",
+      "size": 4,
+      "required_permissions": [],
+      "required_modules": [],
+      "settings": {
+        "sort_by": "period",
+        "sort_order": "desc",
+        "is_edit": false,
+        "object": "visits",
+        "filters": [
+          {
+            "property": "cabinet",
+            "value": "operating"
+          }
+        ]
+      },
+      "headers": {
+        "clients_id": "link_list"
+      },
+      "components": {
+        "filters": [
+          {
+            "title": "Дата (от)",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "size": 2,
+              "is_search": false,
+              "recipient_property": "start_at"
+            }
+          },
+          {
+            "title": "Дата (до)",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "size": 2,
+              "is_search": false,
+              "recipient_property": "end_at"
+            }
+          },
+          {
+            "title": "Клиент",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": true,
+              "recipient_property": "clients_id",
+              "donor_object": "clients",
+              "donor_property_title": [
+                "last_name",
+                "first_name",
+                "patronymic"
+              ],
+              "donor_property_value": "id",
+              "select": [ [ "fio", "last_name", "first_name", "patronymic" ] ],
+              "select_menu": [ [ "id" ], [ "fio" ], [ "phone", "second_phone" ] ]
+            }
+          },
+          {
+            "title": "Филиал",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "store_id",
+              "donor_object": "stores",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          },
+          {
+            "title": "Услуга",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": true,
+              "recipient_property": "services_id",
+              "donor_object": "services",
+              "donor_property_title": "title",
+              "donor_property_value": "id",
+              "select": [ [ "title" ] ],
+              "select_menu": [ [ "article" ], [ "title" ] ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "subpages": []
+}

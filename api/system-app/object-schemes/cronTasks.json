@@ -1,0 +1,229 @@
+{
+  "title": "CRON задачи",
+  "table": "cronTasks",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Объект",
+      "article": "object",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": true,
+      "list_donor": {
+        "table": "projectObjects",
+        "properties_title": "title"
+      },
+      "use_in_commands": [
+        "hook",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Команда",
+      "article": "command",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_visible": false,
+      "joined_field": "object",
+      "joined_field_filter": "object",
+      "list_donor": {
+        "table": "projectCommands",
+        "properties_title": "title"
+      },
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Тип запуска",
+      "article": "run_configuration",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "hook"
+      ],
+      "require_in_commands": [
+        "add"
+      ],
+      "custom_list": [
+        {
+          "title": "Периодически",
+          "value": "period"
+        },
+        {
+          "title": "Единоразово",
+          "value": "once"
+        }
+      ]
+    },
+    {
+      "title": "Аргументы",
+      "article": "argv",
+      "data_type": "array",
+      "field_type": "smart_list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "settings": {
+        "connection_table": "cronArgv",
+        "properties": [
+          {
+            "title": "Аргумент",
+            "article": "property",
+            "data_type": "string",
+            "field_type": "string",
+            "size": 1
+          },
+          {
+            "title": "Значение",
+            "article": "value",
+            "data_type": "string",
+            "field_type": "string",
+            "size": 3
+          }
+        ]
+      }
+    },
+    {
+      "title": "Дата и время запуска",
+      "article": "start_at",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_visible": false,
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Минуты",
+      "article": "minutes",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_visible": false,
+      "is_unique": false,
+      "min_value": 0,
+      "max_value": 59,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Часы",
+      "article": "hours",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_visible": false,
+      "is_autofill": true,
+      "min_value": 0,
+      "max_value": 23,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Дни",
+      "article": "days",
+      "data_type": "string",
+      "field_type": "string",
+      "min_value": 0,
+      "is_visible": false,
+      "max_value": 31,
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Месяца",
+      "article": "month",
+      "data_type": "string",
+      "field_type": "string",
+      "min_value": 0,
+      "is_visible": false,
+      "max_value": 12,
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "background": "dark",
+        "icon": "trash",
+        "object": "cronTasks",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        }
+      }
+    }
+  ]
+}

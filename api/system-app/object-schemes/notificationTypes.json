@@ -1,0 +1,21 @@
+{
+  "title": "Типы уведомлений",
+  "table": "notificationTypes",
+  "search": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "ID роли",
+      "article": "role_id",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get" ],
+      "require_in_commands": []
+    }
+  ]
+}

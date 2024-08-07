@@ -1,0 +1,10 @@
+{
+  "title": "Персональные чаты",
+  "properties": [{
+    "title": "Ключ чата",
+    "article": "chat_key",
+    "type": "varchar(75)",
+    "default": null,
+    "is_required": "Y"
+  }]
+}

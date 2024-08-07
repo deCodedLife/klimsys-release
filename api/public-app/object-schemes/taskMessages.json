@@ -1,0 +1,43 @@
+{
+  "title": "Чат задачи",
+  "table": "taskMessages",
+  "is_trash": false,
+  "properties": [{
+    "title": "Сообщение",
+    "article": "message",
+    "data_type": "string",
+    "field_type": "textarea",
+    "is_default_in_list": true,
+    "is_unique": false,
+    "is_autofill": true,
+    "is_disabled": false,
+    "use_in_commands": ["add"],
+    "require_in_commands": ["add"]
+  }, {
+    "title": "Задача",
+    "article": "task_id",
+    "data_type": "integer",
+    "field_type": "list",
+    "is_default_in_list": true,
+    "is_unique": false,
+    "is_autofill": true,
+    "use_in_commands": ["add", "get"],
+    "list_donor": {
+      "table": "tasks",
+      "properties_title": "description"
+    }
+  },{
+    "title": "Автор",
+    "article": "author_id",
+    "data_type": "integer",
+    "field_type": "list",
+    "is_default_in_list": true,
+    "is_unique": false,
+    "is_autofill": true,
+    "use_in_commands": ["add"],
+    "list_donor": {
+      "table": "users",
+      "properties_title": "last_name"
+    }
+  }]
+}

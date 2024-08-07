@@ -1,0 +1,1 @@
+{"title":"Изменить тип товаров","type":"update","object_scheme":"productGroups","modules":[],"required_permissions":["settings_product_groups"],"no_limit":false}

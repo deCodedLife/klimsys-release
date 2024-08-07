@@ -1,0 +1,96 @@
+{
+  "title": "Клиенты",
+  "properties": [
+    {
+      "title": "Имя",
+      "article": "first_name",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Фамилия",
+      "article": "last_name",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Отчество",
+      "article": "patronymic",
+      "type": "varchar(255)",
+      "default": "",
+      "is_required": "N"
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Телефон",
+      "article": "phone",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Дополнительный телефон",
+      "article": "second_phone",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Адрес",
+      "article": "address",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Пол",
+      "article": "gender",
+      "type": "char(1)",
+      "default": "M",
+      "is_required": "N"
+    },
+    {
+      "title": "Комментарий",
+      "article": "comment",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Дата и время создания",
+      "article": "created_at",
+      "type": "datetime",
+      "default": "CURRENT_TIMESTAMP",
+      "is_required": "N"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_acive",
+      "type": "char(1)",
+      "default": "Y",
+      "is_required": "Y"
+    },
+    {
+      "title": "Черный список",
+      "article": "is_blacklist",
+      "type": "char(1)",
+      "default": "N",
+      "is_required": "N"
+    },
+    {
+      "title": "Telegram id",
+      "article": "telegram_id",
+      "type": "varchar(25)",
+      "default": null,
+      "is_required": "N"
+    }
+  ]
+}

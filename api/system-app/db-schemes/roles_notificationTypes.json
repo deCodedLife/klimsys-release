@@ -1,0 +1,21 @@
+{
+  "title": "Роли - Доступы",
+  "properties": [
+    {
+      "title": "ID роли",
+      "article": "role_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "ID типа уведомлений",
+      "article": "notificationType_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Логи",
+  "properties": [
+    {
+      "title": "Таблица, в которой произошло событие",
+      "article": "table_name",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Статус события (info, warning, error)",
+      "article": "status",
+      "type": "varchar(15)",
+      "is_required": "N",
+      "default": "info"
+    },
+    {
+      "title": "Описание события",
+      "article": "description",
+      "type": "mediumtext",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "IP пользователя, который инициализировал событие",
+      "article": "ip",
+      "type": "varchar(255)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "ID записи, в которой произошло событие",
+      "article": "row_id",
+      "type": "int",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Дата и время создания",
+      "article": "created_at",
+      "type": "datetime",
+      "is_required": "Y",
+      "default": "CURRENT_TIMESTAMP"
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

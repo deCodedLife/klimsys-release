@@ -1,0 +1,59 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Выберите действие",
+      "type": "buttons",
+      "size": 4,
+      "settings": {},
+      "components": {
+        "buttons": [
+          {
+            "type": "modal",
+            "settings": {
+              "title": "Изменить",
+              "background": "dark",
+              "page": "workDays/updateEvent/:row_id",
+              "close_after_submit": true,
+              "refresh_after_submit": true,
+              "close_previous_modal": true,
+              "context": {
+                "rule_id": ":row_id"
+              }
+            }
+          },
+          {
+            "type": "modal",
+            "settings": {
+              "modal_size": "sm",
+              "title": "Привязать кабинет",
+              "background": "dark",
+              "page": "workDays/addCabinet/:row_id",
+              "close_after_submit": true,
+              "refresh_after_submit": true,
+              "close_previous_modal": true,
+              "context": {
+                "eventDate": ":date",
+                "rule_id": ":row_id"
+              }
+            }
+          },
+          {
+            "type": "script",
+            "settings": {
+              "title": "Удалить",
+              "background": "danger",
+              "attention_modal":  true,
+              "object": "workDays",
+              "command": "remove",
+              "data": {
+                "id": ":row_id"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Получение кол-ва непрочитанных сообщений",
+  "type": "custom",
+  "object_scheme": "chat",
+  "required_permissions": [],
+  "required_modules": []
+}

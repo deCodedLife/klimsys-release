@@ -1,0 +1,14 @@
+{
+  "title": "Блоки документов типа 'Текст'",
+  "properties": [
+    {
+      "title": "Тело документа",
+      "article": "document_body",
+      "type": "longtext",
+      "is_required": false,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

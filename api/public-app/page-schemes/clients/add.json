@@ -1,0 +1,110 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "clients_get",
+    "clients_add"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Клиенты - Добавление",
+        "title": [
+          "Добавление клиента"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "clients",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "last_name",
+                  "first_name",
+                  "patronymic",
+                  "gender",
+                  "birthday",
+                  "fullYears",
+                  "advertise_id"
+                ]
+              },
+              {
+                "title": "Документы",
+                "fields": [
+                  "passport_series",
+                  "passport_number",
+                  "passport_issued",
+                  "is_representative"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Контакты",
+                "fields": [
+                  "phone",
+                  "second_phone",
+                  "email",
+                  "address",
+                  "geolocation",
+                  "client_groups"
+                ]
+              },
+              {
+                "title": "Законный представитель",
+                "fields": [
+                  "present_last_name",
+                  "present_first_name",
+                  "present_patronymic",
+                  "present_passport_series",
+                  "present_passport_number",
+                  "present_passport_issued"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "comment"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "clients"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

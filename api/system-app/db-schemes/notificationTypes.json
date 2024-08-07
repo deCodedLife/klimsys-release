@@ -1,0 +1,30 @@
+{
+  "title": "Уведомления",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "article",
+  "rows": [
+    {
+      "title": "Системные ошибки",
+      "article": "system_errors"
+    },
+    {
+      "title": "Системные предупреждения",
+      "article": "system_alerts"
+    }
+  ]
+}

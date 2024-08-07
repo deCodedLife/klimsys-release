@@ -1,0 +1,94 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Расписание",
+      "type": "schedule",
+      "size": 4,
+      "required_permissions": [
+        "manager_section"
+      ],
+      "required_modules": [],
+      "settings": {
+        "object": "visits",
+        "row_href": "visits/add"
+      },
+      "components": {
+        "buttons": [],
+        "filters": [
+          {
+            "title": "Дата",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "recipient_property": "start_at"
+            }
+          },
+          {
+            "title": "Дата",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "recipient_property": "end_at",
+              "is_visible": false,
+              "hook": "visits"
+            }
+          },
+          {
+            "title": "Филиал",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "is_clearable": false,
+              "recipient_property": "store_id",
+              "donor_object": "stores",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          },
+          {
+            "title": "Сотрудник",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "hook": "visits",
+              "recipient_property": "user_id",
+              "donor_object": "users",
+              "donor_property_title": "last_name",
+              "donor_property_value": "id",
+              "select": [ [ "short_fio", "last_name", "first_name", "patronymic" ] ],
+              "select_menu": [ [ "fio" ] ]
+            }
+          },
+          {
+            "title": "Специальность",
+            "type": "list",
+            "settings": {
+              "donor_object": "professions",
+              "donor_property_title": "title",
+              "donor_property_value": "id",
+              "recipient_property": "profession_id"
+            }
+          },
+          {
+            "title": "Хочет раньше",
+            "type": "checkbox",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "is_earlier"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

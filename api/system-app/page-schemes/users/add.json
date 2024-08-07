@@ -1,0 +1,61 @@
+{
+  "required_permissions": [],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "title": [ "Сотрудники" ],
+        "description": ""
+      },
+      "components": {}
+    },
+    {
+      "title": "Форма добавления сотрудника",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "users",
+        "command": "add",
+        "joined_property": "",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [ "avatar", "first_name", "last_name", "patronymic" ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Доступ",
+                "fields": [ "role_id", "email", "password" ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Добавить",
+              "href": "users",
+              "icon": "",
+              "background": "dark"
+            },
+            "required_permissions": [],
+            "required_modules": []
+          }
+        ]
+      }
+    }
+  ]
+}

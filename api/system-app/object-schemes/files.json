@@ -1,0 +1,65 @@
+{
+  "title": "Файлы",
+  "table": "files",
+  "search": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Объект",
+      "article": "object",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "remove"
+      ],
+      "require_in_commands": [
+        "remove"
+      ]
+    },
+    {
+      "title": "Запись",
+      "article": "row_id",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "remove"
+      ],
+      "require_in_commands": [
+        "remove"
+      ]
+    },
+    {
+      "title": "Название файла",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "remove"
+      ],
+      "require_in_commands": [
+        "remove"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"title":"Добавить категорию товаров","type":"add","object_scheme":"productCategories","modules":[],"required_permissions":["settings_product_categories"],"no_limit":false}

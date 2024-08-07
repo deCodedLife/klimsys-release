@@ -1,0 +1,8 @@
+{
+  "title": "Вывод",
+  "type": "get",
+  "object_scheme": "users_stores",
+  "modules": [],
+  "permissions": [],
+  "should_log": false
+}

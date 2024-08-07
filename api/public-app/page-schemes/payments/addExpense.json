@@ -1,0 +1,80 @@
+{
+  "required_modules": [],
+  "required_permissions": ["payments_get"],
+  "structure": [
+    {
+      "title": "Заголовок",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Добавить расход"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Форма депозита",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "expenses",
+        "command": "add",
+        "data": {
+          "id": ":id"
+        },
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "title",
+                  "user_id",
+                  "store_id"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "created_at",
+                  "expensType_id",
+                  "price"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "comment"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

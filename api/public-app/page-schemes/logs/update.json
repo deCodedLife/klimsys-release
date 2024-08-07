@@ -1,0 +1,45 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [{
+    "title": "Шапка",
+    "type": "header",
+    "size": 4,
+    "settings": {
+      "title": ["Лог № ", ":id"],
+      "description": "Логи - Просмотр"
+    },
+    "components": {
+      "buttons": []
+    }
+  }, {
+    "title": "Форма",
+    "type": "info",
+    "size": 4,
+    "settings": {
+      "object": "logs",
+      "areas": [{
+        "size": 2,
+        "blocks": [{
+          "title": "Основное",
+          "fields": ["table_name", "row_id", "status","created_at"]
+        }]
+      }, {
+        "size": 2,
+        "blocks": [{
+          "title": "Детали",
+          "fields": ["users_id","clients_id","ip"]
+        }]
+      }, {
+        "size": 4,
+        "blocks": [{
+          "title": "",
+          "fields": ["description"]
+        }]
+      }]
+    },
+    "components": {
+      "buttons": []
+    }
+  }]
+}

@@ -1,0 +1,73 @@
+{
+  "title": "События. Аналог веб-соккетов",
+  "table": "events",
+  "search": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Таблица",
+      "article": "table_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "get-last-id"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Получатель",
+      "article": "user_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "settings": {
+        "is_multiply": false,
+        "is_search": false
+      },
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "get-last-id"
+      ],
+      "require_in_commands": [],
+      "list_donor": {
+        "table": "users",
+        "properties_title": "last_name"
+      }
+    },
+    {
+      "title": "Последнее обновление",
+      "article": "last_update_at",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    }
+  ]
+}

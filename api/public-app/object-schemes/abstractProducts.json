@@ -1,0 +1,91 @@
+{
+  "title": "Товары",
+  "table": "products",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_in_search": false,
+      "require_in_commands": [],
+      "use_in_commands": [
+        "get",
+        "search"
+      ]
+    },
+    {
+      "title": "Тип",
+      "article": "type",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_in_search": false,
+      "require_in_commands": [],
+      "use_in_commands": [
+        "get",
+        "search"
+      ]
+    },
+    {
+      "title": "Цена",
+      "article": "cost",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_in_search": false,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Количество",
+      "article": "count",
+      "data_type": "float",
+      "field_type": "float",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_in_search": false,
+      "use_in_commands": [ "get" ],
+      "require_in_commands": []
+    },
+    {
+      "title": "ID продукта",
+      "article": "product_id",
+      "data_type": "float",
+      "field_type": "float",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_in_search": false,
+      "use_in_commands": [ "get" ],
+      "require_in_commands": []
+    },
+    {
+      "title": "ID связанного продукта",
+      "article": "related",
+      "data_type": "float",
+      "field_type": "float",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_in_search": false,
+      "use_in_commands": [ "get" ],
+      "require_in_commands": []
+    }
+  ]
+}

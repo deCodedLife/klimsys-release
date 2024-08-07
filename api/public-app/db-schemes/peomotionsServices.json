@@ -1,0 +1,1 @@
+{"title":"Акционные услуги","properties":[{"title":"Акция","article":"promotion_id","type":"int","default":null,"is_required":"Y"},{"title":"Услуга","article":"service_id","type":"int","default":null,"is_required":"Y"}]}

@@ -1,0 +1,21 @@
+{
+  "title": "Подписчики - Модули",
+  "properties": [
+    {
+      "title": "ID подписчика",
+      "article": "subscriber_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "ID модуля",
+      "article": "module_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

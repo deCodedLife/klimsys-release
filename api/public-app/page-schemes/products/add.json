@@ -1,0 +1,65 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "products_add"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Новый товар",
+        "title": [
+          "Товары"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "products",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "product_type",
+                  "manufacturer",
+                  "image",
+                  "description",
+                  "series",
+                  "model",
+                  "price",
+                  "type",
+                  "control_type",
+                  "freon",
+                  "cooling_power",
+                  "heating_power"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark",
+              "href": "products"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

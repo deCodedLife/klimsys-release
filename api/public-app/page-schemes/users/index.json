@@ -1,0 +1,72 @@
+{
+  "required_modules": [],
+  "required_permissions": ["users_get"],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Сотрудники",
+        "title": [
+          "Сотрудники"
+        ]
+      },
+      "components": {}
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "is_infinite": true,
+        "object": "users"
+      },
+      "components": {
+        "search": true,
+        "filters": [
+          {
+            "title": "Роль",
+            "type": "list",
+            "settings": {
+              "recipient_property": "role_id",
+              "donor_object": "roles",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          },
+          {
+            "title": "Специальность",
+            "type": "list",
+            "settings": {
+              "donor_object": "professions",
+              "donor_property_title": "title",
+              "donor_property_value": "id",
+              "recipient_property": "professions_id"
+            }
+          },
+          {
+            "title": "Филиал",
+            "type": "list",
+            "settings": {
+              "recipient_property": "stores_id",
+              "donor_object": "stores",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить сотрудника",
+              "background": "dark",
+              "page": "users/add"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

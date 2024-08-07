@@ -1,0 +1,336 @@
+{
+  "title": "Сотрудники",
+  "table": "users",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Аватар",
+      "article": "avatar",
+      "data_type": "image",
+      "field_type": "image",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_variable": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [],
+      "settings": {
+        "allowed_formats": [
+          "png"
+        ],
+        "max_size": 2097152,
+        "is_multiply": false
+      }
+    },
+    {
+      "title": "ФИО",
+      "article": "fio",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [],
+      "require_in_commands": []
+    },
+    {
+      "title": "ФИО короткое",
+      "article": "short_fio",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [],
+      "require_in_commands": []
+    },
+    {
+      "title": "Фамилия",
+      "article": "last_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Имя",
+      "article": "first_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Отчество",
+      "article": "patronymic",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ]
+    },
+    {
+      "title": "Роль",
+      "article": "role_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": [
+        "add"
+      ],
+      "list_donor": {
+        "table": "roles",
+        "properties_title": "title"
+      }
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "data_type": "email",
+      "field_type": "email",
+      "is_default_in_list": false,
+      "is_unique": true,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "sign-in"
+      ],
+      "require_in_commands": [
+        "add",
+        "sign-in"
+      ]
+    },
+    {
+      "title": "Пароль",
+      "article": "password",
+      "data_type": "password",
+      "field_type": "password",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "sign-in"
+      ],
+      "require_in_commands": [
+        "add",
+        "sign-in"
+      ]
+    },
+    {
+      "title": "Адрес",
+      "article": "address",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ]
+    },
+    {
+      "title": "Телефон",
+      "article": "phone",
+      "data_type": "phone",
+      "field_type": "phone",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Дополнительный телефон",
+      "article": "second_phone",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Комментарий",
+      "article": "comment",
+      "data_type": "string",
+      "field_type": "textarea",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Дата рождения",
+      "article": "birthday",
+      "data_type": "date",
+      "field_type": "date",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Пол",
+      "article": "gender",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "custom_list": [
+        {
+          "title": "Мужской",
+          "value": "M"
+        },
+        {
+          "title": "Женский",
+          "value": "W"
+        }
+      ]
+    },
+    {
+      "title": "Оклад",
+      "article": "salary",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "is_variable": false,
+      "use_in_commands": [
+        "update",
+        "add",
+        "get"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Тип зарплаты",
+      "article": "salary_type",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "is_hook": true,
+      "use_in_commands": [
+        "update",
+        "remove",
+        "get",
+        "add",
+        "hook"
+      ],
+      "custom_list": [
+        {
+          "title": "Фиксированный оклад",
+          "value": "fixed"
+        },
+        {
+          "title": "Оклад в час",
+          "value": "per_hour"
+        },
+        {
+          "title": "Ставка + процент от продаж",
+          "value": "rate_percent"
+        },
+        {
+          "title": "Ставка + KPI",
+          "value": "rate_kpi"
+        }
+      ]
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Изменить",
+        "page": [
+          "users/update/",
+          ":id"
+        ],
+        "icon": "gear",
+        "background": "dark"
+      }
+    },
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "background": "dark",
+        "icon": "trash",
+        "object": "users",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        }
+      }
+    }
+  ]
+}

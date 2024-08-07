@@ -1,0 +1,7 @@
+{
+  "title": "Кол-во посещений у сотрудника",
+  "type": "custom",
+  "object_scheme": "analytic_widgets",
+  "required_permissions": [],
+  "required_modules": []
+}

@@ -1,0 +1,47 @@
+{
+  "required_permissions": [],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "title": [ ":last_name", " ", ":first_name", " ", ":patronymic" ],
+        "description": ""
+      },
+      "components": {}
+    },
+    {
+      "title": "Детальная информация о сотруднике",
+      "type": "info",
+      "size": 4,
+      "settings": {
+        "object": "users",
+        "command": "update",
+        "joined_property": "",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [ "first_name", "last_name", "patronymic" ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Доступ",
+                "fields": [ "role_id", "email", "password" ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {}
+    }
+  ]
+}

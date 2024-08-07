@@ -1,0 +1,75 @@
+{
+  "title": "Транзакции",
+  "properties": [
+    {
+      "title": "Статус",
+      "article": "status",
+      "type": "varchar(15)",
+      "default": "waiting",
+      "is_required": "Y"
+    },
+    {
+      "title": "ID клиента",
+      "article": "client_id",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "ID сотрудника",
+      "article": "employee_id",
+      "type": "int",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Тип действия",
+      "article": "action",
+      "type": "varchar(15)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Способ оплаты",
+      "article": "pay_method",
+      "type": "varchar(15)",
+      "default": "cash",
+      "is_required": "N"
+    },
+    {
+      "title": "Сумма списания с карты",
+      "article": "sum_card",
+      "type": "float",
+      "default": 0,
+      "is_required": "N"
+    },
+    {
+      "title": "Сумма списания наличными",
+      "article": "sum_cash",
+      "type": "float",
+      "default": 0,
+      "is_required": "N"
+    },
+    {
+      "title": "Дата проведения операции",
+      "article": "created_at",
+      "type": "datetime",
+      "default": "CURRENT_TIMESTAMP",
+      "is_required": "Y"
+    },
+    {
+      "title": "Итого",
+      "article": "summary",
+      "type": "float",
+      "default": 0,
+      "is_required": "N"
+    },
+    {
+      "title": "Системное поле",
+      "article": "is_system",
+      "type": "char(1)",
+      "default": "N",
+      "is_required": "N"
+    }
+  ]
+}

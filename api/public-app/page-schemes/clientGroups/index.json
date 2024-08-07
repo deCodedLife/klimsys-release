@@ -1,0 +1,33 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [{
+    "title": "Шапка",
+    "type": "header",
+    "size": 4,
+    "settings": {
+      "description": "Группы клиентов",
+      "title": ["Группы клиентов"]
+    },
+    "components": {
+      "buttons": []
+    }
+  }, {
+    "title": "Список",
+    "type": "list",
+    "size": 4,
+    "settings": {
+      "object": "clientGroups"
+    },
+    "components": {
+      "buttons": [{
+        "type": "href",
+        "settings": {
+          "title": "Добавить группу",
+          "background": "dark",
+          "page": "clientGroups/add"
+        }
+      }]
+    }
+  }]
+}

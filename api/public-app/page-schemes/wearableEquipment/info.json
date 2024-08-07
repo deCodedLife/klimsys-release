@@ -1,0 +1,48 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Оборудование - Просмотр",
+        "title": [
+          "№ ",
+          ":id",
+          " ",
+          ":title"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "info",
+      "size": 4,
+      "settings": {
+        "object": "users",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "title",
+                  "store_id",
+                  "is_visible_in_schedule"
+                ]
+              }
+            ]
+          }
+        ],
+        "command": "get"
+      },
+      "components": []
+    }
+  ]
+}

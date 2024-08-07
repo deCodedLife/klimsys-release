@@ -1,0 +1,37 @@
+{
+  "required_permissions": [],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "title": [ "Роли" ],
+        "description": ""
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить роль",
+              "page": "roles/add",
+              "icon": "",
+              "background": "dark"
+            },
+            "required_permissions": [],
+            "required_modules": []
+          }
+        ]
+      }
+    },
+    {
+      "title": "Список ролей",
+      "type": "roles",
+      "size": 4,
+      "settings": {},
+      "components": {}
+    }
+  ]
+}

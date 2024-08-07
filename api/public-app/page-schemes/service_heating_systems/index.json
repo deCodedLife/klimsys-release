@@ -1,0 +1,43 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Услуги",
+        "title": [
+          "Услуги"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "is_infinite": true,
+        "object": "service_heating_systems"
+      },
+      "components": {
+        "search": true,
+        "filters": [],
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить услугу",
+              "background": "dark",
+              "page": "services/add"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

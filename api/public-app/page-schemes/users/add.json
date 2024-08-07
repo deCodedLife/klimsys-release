@@ -1,0 +1,111 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "users_get",
+    "users_add"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Сотрудники - Добавление",
+        "title": [
+          "Добавление сотрудника"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "users",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "avatar",
+                  "last_name",
+                  "first_name",
+                  "patronymic",
+                  "professions_id",
+                  "birthday",
+                  "stores_id",
+                  "gender",
+                  "domru_login",
+                  "is_visible_in_schedule",
+                  "is_queue",
+                  "is_visibleOnSite",
+                  "notify_clients"
+                ]
+              },
+              {
+                "title": "Доступы",
+                "fields": [
+                  "role_id",
+                  "email",
+                  "password"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Документы",
+                "fields": [
+                  "passport_series",
+                  "passport_number",
+                  "passport_issued",
+                  "snils",
+                  "inn"
+                ]
+              },
+              {
+                "title": "Контакты",
+                "fields": [
+                  "phone",
+                  "second_phone",
+                  "address"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "comment"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "users"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Получить список продаж",
+  "type": "get",
+  "object_scheme": "abstractProducts",
+  "required_modules": [],
+  "required_permissions": [],
+  "no_limit": false
+}

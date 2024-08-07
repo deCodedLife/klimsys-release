@@ -1,0 +1,94 @@
+{
+  "required_modules": [],
+  "required_permissions": [ "payments_get" ],
+  "structure": [
+    {
+      "title": "Заголовок",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Новая продажа"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Форма депозита",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "salesList",
+        "command": "add",
+        "data": {
+          "id": ":id"
+        },
+        "areas": [
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "sale_products"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "pay_method",
+                  "client_id",
+                  "clients_info",
+                  "sum_cash",
+                  "sum_card"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "action",
+                  "discount_type",
+                  "discount_value",
+                  "summary",
+                  "online_receipt"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "modal",
+            "settings": {
+              "title": "Добавить товар",
+              "background": "dark",
+              "page": "payments/addProduct",
+              "modal_size": "lg"
+            }
+          },
+          {
+            "type": "submit",
+            "settings": {
+              "href": "payments",
+              "background": "dark",
+              "title": "Провести"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

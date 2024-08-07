@@ -1,0 +1,38 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Заголовок",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "CRON задачи",
+        "title": [
+          "CRON задачи"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "object": "cronTasks"
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить cron",
+              "background": "dark",
+              "page": "cronTasks/add"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

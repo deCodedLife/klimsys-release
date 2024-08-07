@@ -1,0 +1,48 @@
+{
+  "title": "Типы документов",
+  "table": "documentTypes",
+  "search": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    }
+  ]
+}

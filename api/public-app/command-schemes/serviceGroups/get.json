@@ -1,0 +1,1 @@
+{"title":"Получить группы услуг","type":"get","object_scheme":"serviceGroups","modules":[],"required_permissions":["settings_services_groups"]}

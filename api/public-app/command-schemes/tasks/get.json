@@ -1,0 +1,7 @@
+{
+  "title": "Вывод",
+  "type": "get",
+  "object_scheme": "tasks",
+  "required_permissions": [],
+  "required_modules": []
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Роли",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "article",
+  "rows": [
+    {
+      "id": 1,
+      "title": "Техническая поддержка",
+      "article": "support",
+      "is_system": "Y"
+    },
+    {
+      "id": 2,
+      "title": "Директор",
+      "article": "director",
+      "is_system": "Y"
+    },
+    {
+      "id": 3,
+      "title": "Сайт",
+      "article": "public",
+      "is_system": "Y"
+    }
+  ]
+}

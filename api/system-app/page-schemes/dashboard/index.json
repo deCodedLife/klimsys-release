@@ -1,0 +1,17 @@
+{
+  "required_permissions": [],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "title": [ "Панель управления" ],
+        "description": ""
+      },
+      "components": {}
+    }
+  ],
+  "subpages": []
+}

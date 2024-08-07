@@ -1,0 +1,107 @@
+{
+  "title": "Баланс кассы",
+  "table": "cashboxBalances",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Дата",
+      "article": "date",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true
+    },
+    {
+      "title": "Дата начала",
+      "article": "start_at",
+      "data_type": "date",
+      "field_type": "date",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "get"
+      ]
+    },
+    {
+      "title": "Дата конца",
+      "article": "end_at",
+      "data_type": "date",
+      "field_type": "date",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "get"
+      ]
+    },
+    {
+      "title": "Тип операции",
+      "article": "operation_type",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "custom_list": []
+    },
+    {
+      "title": "ID  клиента",
+      "article": "client_id",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true
+    },
+    {
+      "title": "Клиент",
+      "article": "client",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "list_donor": {
+        "table": "clients",
+        "properties_title": "last_name"
+      }
+    },
+    {
+      "title": "Приход/Расход",
+      "article": "summary",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true
+    },
+    {
+      "title": "Оператор",
+      "article": "operator",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true
+    },
+    {
+      "title": "Филиал",
+      "article": "store_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "get"
+      ],
+      "require_in_commands": [],
+      "list_donor": {
+        "table": "stores",
+        "properties_title": "title"
+      }
+    }
+  ]
+}

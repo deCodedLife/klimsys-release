@@ -1,0 +1,128 @@
+{
+  "required_permissions": [],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Задачи",
+      "type": "list",
+      "size": 4,
+      "required_permissions": [],
+      "required_modules": [],
+      "settings": {
+        "object": "tasks",
+        "is_csv": true
+      },
+      "components": {
+        "filters": [
+          {
+            "title": "Тема",
+            "placeholder": "Тема",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "taskGroup_id",
+              "donor_object": "taskGroups",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          },
+          {
+            "title": "Дата",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "deadline"
+            }
+          },
+          {
+            "title": "Исполнитель",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "performer_id",
+              "donor_object": "users",
+              "donor_property_title": "last_name",
+              "donor_property_value": "id",
+              "select": [ [ "short_fio", "last_name", "first_name", "patronymic" ] ],
+              "select_menu": [ [ "fio", "last_name", "first_name", "patronymic" ] ]
+            }
+          },
+          {
+            "title": "Автор",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "author_id",
+              "donor_object": "users",
+              "donor_property_title": "last_name",
+              "donor_property_value": "id",
+              "select": [ [ "short_fio", "last_name", "first_name", "patronymic" ] ],
+              "select_menu": [ [ "fio", "last_name", "first_name", "patronymic" ] ]
+            }
+          },
+          {
+            "title": "Клиент",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": true,
+              "recipient_property": "client_id",
+              "donor_object": "clients",
+              "donor_property_title": "last_name",
+              "donor_property_value": "id",
+              "select": [ [ "id" ], [ "fio", "last_name", "first_name", "patronymic" ] ],
+              "select_menu": [ [ "id" ], [ "fio" ], [ "phone", "second_phone" ] ]
+            }
+          },
+          {
+            "title": "Статус",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "status",
+              "list": [
+                {
+                  "title": "Поставлена",
+                  "value": "set"
+                },
+                {
+                  "title": "Завершена",
+                  "value": "ended"
+                },
+                {
+                  "title": "Просрочена",
+                  "value": "overdue"
+                }
+              ]
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить задачу",
+              "page": "tasks/add",
+              "icon": "",
+              "background": "dark"
+            },
+            "required_permissions": [],
+            "required_modules": []
+          }
+        ]
+      }
+    }
+  ],
+  "subpages": []
+}

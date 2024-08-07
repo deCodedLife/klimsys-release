@@ -1,0 +1,1 @@
+{"title":"Удалить группу услуг","type":"remove","object_scheme":"serviceGroups","modules":[],"required_permissions":["settings_services_groups"],"no_limit":true}

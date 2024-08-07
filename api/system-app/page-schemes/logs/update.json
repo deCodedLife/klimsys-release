@@ -1,0 +1,56 @@
+{
+  "required_permissions": [],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "title": [ "Логи" ],
+        "description": ""
+      },
+      "components": {}
+    },
+    {
+      "title": "Детальная информация",
+      "type": "info",
+      "size": 4,
+      "settings": {
+        "object": "logs",
+        "command": "info",
+        "joined_property": "",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [ "table_name", "row_id", "status" ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [ "ip", "created_at" ]
+              }
+            ]
+          },
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [ "description" ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {}
+    }
+  ]
+}

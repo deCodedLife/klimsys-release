@@ -1,0 +1,38 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "title": [
+          "Поставщики"
+        ],
+        "description": "Поставщики"
+      },
+      "components": []
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "object": "providers"
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark",
+              "page": "providers/add"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

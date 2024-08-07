@@ -1,0 +1,476 @@
+{
+  "title": "Продажи",
+  "table": "salesList",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Дата и время операции",
+      "article": "created_at",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "add",
+        "get"
+      ],
+      "is_in_search": true
+    },
+    {
+      "title": "Товары и услуги",
+      "article": "products_display",
+      "data_type": "array",
+      "field_type": "info_strings",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "hook",
+        "get"
+      ],
+      "require_in_commands": [],
+      "custom_list": []
+    },
+    {
+      "title": "RESERVED",
+      "article": "products",
+      "data_type": "array",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_visible": false,
+      "use_in_commands": [
+        "add",
+        "hook"
+      ],
+      "is_empty": true,
+      "require_in_commands": [ "add" ],
+      "custom_list": []
+    },
+    {
+      "title": "RESERVED",
+      "article": "client",
+      "data_type": "array",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_visible": false,
+      "use_in_commands": [
+        "add",
+        "hook"
+      ],
+      "is_empty": true,
+      "require_in_commands": [ "add" ],
+      "custom_list": []
+    },
+    {
+      "title": "Тип скидки",
+      "article": "discount_type",
+      "data_type": "string",
+      "field_type": "radio",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_variable": false,
+      "use_in_commands": [
+        "add",
+        "update",
+        "hook"
+      ],
+      "custom_list": [
+        {
+          "title": "Фиксированная",
+          "value": "fixed"
+        },
+        {
+          "title": "Процент",
+          "value": "percent"
+        }
+      ],
+      "is_hook": true
+    },
+    {
+      "title": "Сумма скидки",
+      "article": "discount_value",
+      "data_type": "float",
+      "field_type": "integer",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_variable": false,
+      "use_in_commands": [
+        "add",
+        "update",
+        "hook"
+      ],
+      "is_hook": true
+    },
+    {
+      "title": "Клиент",
+      "article": "client_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "search": "clients",
+      "use_in_commands": [
+        "add",
+        "update",
+        "get",
+        "schedule",
+        "hook"
+      ],
+      "require_in_commands": [],
+      "is_disabled": false,
+      "list_donor": {
+        "table": "clients",
+        "properties_title": "last_name",
+        "select": [
+          [
+            "id"
+          ],
+          [
+            "last_name"
+          ],
+          [
+            "first_name"
+          ],
+          [
+            "patronymic"
+          ],
+          [
+            "phone"
+          ]
+        ]
+      },
+      "annotation": "",
+      "is_hook": true,
+      "is_visible": true
+    },
+    {
+      "title": "Информация о клиентах",
+      "article": "clients_info",
+      "data_type": "array",
+      "field_type": "info_strings",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "update",
+        "add",
+        "get"
+      ],
+      "require_in_commands": [],
+      "is_hook": true,
+      "is_variable": false,
+      "is_visible": true
+    },
+    {
+      "title": "Сотрудник",
+      "article": "employee_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "list_donor": {
+        "table": "users",
+        "properties_title": "last_name",
+        "select": [
+          [
+            "id"
+          ],
+          [
+            "last_name"
+          ],
+          [
+            "first_name"
+          ],
+          [
+            "patronymic"
+          ]
+        ]
+      },
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ],
+      "require_in_commands": [],
+      "is_visible": false
+    },
+    {
+      "title": "Тип действия",
+      "article": "action",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get",
+        "return",
+        "hook"
+      ],
+      "require_in_commands": [
+        "add"
+      ],
+      "custom_list": [
+        {
+          "title": "Продажа",
+          "value": "sell"
+        },
+        {
+          "title": "Заказ",
+          "value": "order"
+        },
+        {
+          "title": "Возврат",
+          "value": "sellReturn"
+        },
+        {
+          "title": "Пополнение депозита",
+          "value": "deposit"
+        },
+        {
+          "title": "Расход",
+          "value": "expense"
+        }
+      ],
+      "is_visible": false,
+      "is_disabled": true
+    },
+    {
+      "title": "Сумма к оплате",
+      "article": "summary",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "list_donor": {
+        "table": null,
+        "properties_title": null
+      },
+      "use_in_commands": [
+        "add",
+        "hook",
+        "return",
+        "update"
+      ],
+      "require_in_commands": [],
+      "is_hook": true,
+      "is_disabled": true
+    },
+    {
+      "title": "Сумма списания с карты",
+      "article": "sum_card",
+      "data_type": "float",
+      "field_type": "price",
+      "is_disabled": true,
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "hook",
+        "return"
+      ],
+      "require_in_commands": [],
+      "is_hook": true,
+      "min_value": 0,
+      "is_visible": false
+    },
+    {
+      "title": "Наличными",
+      "article": "sum_cash",
+      "data_type": "float",
+      "field_type": "price",
+      "is_disabled": true,
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "hook",
+        "return"
+      ],
+      "require_in_commands": [],
+      "is_hook": true,
+      "min_value": 0,
+      "is_visible": false
+    },
+    {
+      "title": "Статус оплаты",
+      "article": "status",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "add",
+        "update",
+        "return"
+      ],
+      "require_in_commands": [],
+      "custom_list": [
+        {
+          "title": "В процессе",
+          "value": "waiting"
+        },
+        {
+          "title": "Успешно",
+          "value": "done"
+        },
+        {
+          "title": "Ошибка",
+          "value": "error"
+        }
+      ]
+    },
+    {
+      "title": "Способ оплаты",
+      "article": "pay_method",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "hook",
+        "update",
+        "add",
+        "get"
+      ],
+      "custom_list": [
+        {
+          "title": "Наличные",
+          "value": "cash"
+        },
+        {
+          "title": "Безналичные",
+          "value": "card"
+        },
+        {
+          "title": "Раздельная",
+          "value": "parts"
+        },
+        {
+          "title": "Онлайн оплата",
+          "value": "online"
+        }
+      ],
+      "is_hook": true,
+      "require_in_commands": [
+        "order"
+      ]
+    },
+    {
+      "title": "Товары",
+      "article": "sale_products",
+      "data_type": "array",
+      "field_type": "smart_list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "hook",
+        "add",
+        "update"
+      ],
+      "list_donor": {
+        "table": "products",
+        "properties_title": "title"
+      },
+      "settings": {
+        "properties": [
+          {
+            "title": "Продукт",
+            "article": "id",
+            "data_type": "integer",
+            "field_type": "list",
+            "size": 3,
+            "list_donor": {
+              "table": "abstractProducts",
+              "properties_title": "title"
+            }
+          },
+          {
+            "size": 1,
+            "article": "amount",
+            "data_type": "integer",
+            "field_type": "integer",
+            "title": "Количество"
+          }
+        ]
+      },
+      "is_hook": true
+    },
+    {
+      "title": "Фильтр даты (от)",
+      "article": "start_at",
+      "data_type": "date",
+      "field_type": "date",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "get"
+      ]
+    },
+    {
+      "title": "Фильтр даты (до)",
+      "article": "end_at",
+      "data_type": "date",
+      "field_type": "date",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "get"
+      ]
+    },
+    {
+      "title": "Количество",
+      "article": "amount",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [
+        "add",
+        "update",
+        "hook"
+      ]
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Провести",
+        "background": "dark",
+        "icon": "trash",
+        "object": "sales",
+        "command": "saleCreate",
+        "data": {
+          "id": ":id"
+        },
+        "page": [
+          "payments/saleCreate/",
+          ":id"
+        ]
+      }
+    }
+  ]
+}

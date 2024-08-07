@@ -1,0 +1,78 @@
+{
+  "required_modules": [],
+  "required_permissions": ["payments_get"],
+  "structure": [
+    {
+      "title": "Форма возврата",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Возврат"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Продажа",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "salesList",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "products_display",
+                  "visits_ids",
+                  "pay_method",
+                  "sum_cash",
+                  "sum_card",
+                  "summary"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "store_id",
+                  "sum_bonus",
+                  "sum_deposit",
+                  "return_bonuses",
+                  "return_deposit",
+                  "online_receipt",
+                  "client_id",
+                  "terminal_code",
+                  "action"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Вернуть",
+              "href": "payments",
+              "background": "dark"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

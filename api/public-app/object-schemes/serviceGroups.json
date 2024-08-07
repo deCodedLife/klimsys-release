@@ -1,0 +1,118 @@
+{
+  "title": "Группы услуг",
+  "table": "serviceGroups",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Активность",
+      "article": "is_active",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "remove",
+        "update"
+      ]
+    },
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Родительская группа",
+      "article": "parent_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": [],
+      "list_donor": {
+        "table": "serviceGroups",
+        "properties_title": "title"
+      }
+    },
+    {
+      "title": "Общее время выполнения (мин)",
+      "article": "time",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ]
+    },
+    {
+      "title": "Сотрудники",
+      "article": "employees",
+      "data_type": "array",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "join": {
+        "connection_table": "serviceGroupEmployees",
+        "donor_table": "users",
+        "property_article": "last_name",
+        "insert_property": "groupID",
+        "filter_property": "employeeID"
+      },
+      "use_in_commands": [
+        "add",
+        "get",
+        "update"
+      ]
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Изменить",
+        "page": [
+          "serviceGroups/update/",
+          ":id"
+        ],
+        "icon": "gear",
+        "background": "dark"
+      }
+    },
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "background": "dark",
+        "icon": "trash",
+        "object": "serviceGroups",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        }
+      }
+    }
+  ]
+}

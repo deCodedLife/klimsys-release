@@ -1,0 +1,7 @@
+{
+  "title": "Импорт",
+  "type": "import",
+  "object_scheme": "clients",
+  "required_permissions": [],
+  "required_modules": []
+}

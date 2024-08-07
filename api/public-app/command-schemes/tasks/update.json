@@ -1,0 +1,7 @@
+{
+  "title": "Редактирование",
+  "type": "update",
+  "object_scheme": "tasks",
+  "required_permissions": ["tasks_update"],
+  "required_modules": []
+}

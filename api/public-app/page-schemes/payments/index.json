@@ -1,0 +1,111 @@
+{
+  "required_modules": [],
+  "required_permissions": ["payments_get"],
+  "structure": [
+    {
+      "title": "Табы",
+      "type": "tabs",
+      "size": 4,
+      "settings": {
+        "salesList": {
+          "title": "Операции по кассе",
+          "body": [
+            {
+              "title": "Список",
+              "type": "list",
+              "size": 4,
+              "settings": {
+                "link": false,
+                "object": "salesList"
+              },
+              "components": {
+                "buttons": [
+                  {
+                    "type": "modal",
+                    "settings": {
+                      "title": "Новая продажа",
+                      "background": "dark",
+                      "page": "payments/saleCreate",
+                      "modal_size": "xl"
+                    }
+                  }
+                ],
+                "filters": [
+                  {
+                    "title": "Дата (от)",
+                    "type": "date",
+                    "settings": {
+                      "size": 2,
+                      "recipient_property": "start_at"
+                    }
+                  },
+                  {
+                    "title": "Дата (до)",
+                    "type": "date",
+                    "settings": {
+                      "size": 2,
+                      "recipient_property": "end_at"
+                    }
+                  },
+                  {
+                    "title": "Клиент",
+                    "settings": {
+                      "is_search": false,
+                      "donor_object": "clients",
+                      "donor_property_title": [
+                        [
+                          "fio",
+                          "last_name",
+                          "first_name",
+                          "patronymic"
+                        ]
+                      ],
+                      "donor_property_value": "id",
+                      "recipient_property": "client_id",
+                      "select_menu": [
+                        [
+                          "id"
+                        ],
+                        [
+                          "fio"
+                        ],
+                        [
+                          "phone",
+                          "second_phone"
+                        ]
+                      ]
+                    },
+                    "type": "list"
+                  },
+                  {
+                    "title": "Способ оплаты",
+                    "type": "list",
+                    "settings": {
+                      "donor_object": "salePayMethods",
+                      "donor_property_title": "title",
+                      "donor_property_value": "article",
+                      "recipient_property": "pay_method"
+                    }
+                  },
+                  {
+                    "title": "Тип операции",
+                    "type": "list",
+                    "settings": {
+                      "donor_object": "saleActions",
+                      "donor_property_title": "title",
+                      "donor_property_value": "article",
+                      "recipient_property": "action"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "components": {
+        "buttons": []
+      }
+    }
+  ]
+}

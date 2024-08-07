@@ -1,0 +1,65 @@
+{
+  "required_modules": [],
+  "required_permissions": ["payments_get"],
+  "structure": [
+    {
+      "title": "Заголовок",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Добавить товар"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Форма депозита",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "salesList",
+        "command": "add",
+        "data": {
+          "id": ":id"
+        },
+        "areas": [
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "return_products",
+                  "amount"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "modal",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark",
+              "page": "payments/addProduct",
+              "modal_size": "sm"
+            }
+          },
+          {
+            "type": "submit",
+            "settings": {
+              "href": "payments",
+              "background": "dark",
+              "title": "Отмена"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

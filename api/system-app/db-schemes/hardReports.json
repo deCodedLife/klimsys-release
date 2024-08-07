@@ -1,0 +1,35 @@
+{
+  "title": "Высоконагруженные отчеты",
+  "properties": [
+    {
+      "title": "Артикул отчета",
+      "article": "report_article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Статус",
+      "article": "status",
+      "type": "varchar(25)",
+      "is_required": true,
+      "default": "waiting"
+    },
+    {
+      "title": "Кол-во обработанных записей",
+      "article": "offset_count",
+      "type": "int",
+      "is_required": false,
+      "default": 0
+    },
+    {
+      "title": "Дата и время создания",
+      "article": "created_at",
+      "type": "datetime",
+      "is_required": true,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

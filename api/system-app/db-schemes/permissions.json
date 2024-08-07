@@ -1,0 +1,43 @@
+{
+  "title": "Доступы",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "varchar(255)",
+      "is_required": false,
+      "default": null
+    },
+    {
+      "title": "ID группы",
+      "article": "group_id",
+      "type": "int",
+      "is_required": true,
+      "default": 1
+    }
+  ],
+  "rows_key": "article",
+  "rows": [
+    {
+      "id": 1,
+      "title": "Поддержка",
+      "article": "support",
+      "description": "Для служебного пользования",
+      "group_id": 1
+    }
+  ]
+}

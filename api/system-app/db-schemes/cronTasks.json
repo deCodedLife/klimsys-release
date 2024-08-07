@@ -1,0 +1,68 @@
+{
+  "title": "Крон задачи",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Объект",
+      "article": "object",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Команда",
+      "article": "command",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Тип запуска",
+      "article": "run_configuration",
+      "type": "varchar(75)",
+      "default": "period",
+      "is_required": "Y"
+    },
+    {
+      "title": "Дата и время запуска",
+      "article": "start_at",
+      "type": "datetime",
+      "default": "CURRENT_TIMESTAMP",
+      "is_required": "N"
+    },
+    {
+      "title": "Месяцы",
+      "article": "month",
+      "type": "varchar(75)",
+      "default": "*",
+      "is_required": "Y"
+    },
+    {
+      "title": "Дни",
+      "article": "days",
+      "type": "varchar(75)",
+      "default": "*",
+      "is_required": "Y"
+    },
+    {
+      "title": "Часы",
+      "article": "hours",
+      "type": "varchar(75)",
+      "default": "*",
+      "is_required": "Y"
+    },
+    {
+      "title": "minutes",
+      "article": "minutes",
+      "type": "varchar(75)",
+      "default": "*",
+      "is_required": "Y"
+    }
+  ]
+}

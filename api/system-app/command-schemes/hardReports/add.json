@@ -1,0 +1,7 @@
+{
+  "title": "Добавить обновление отчета в очередь",
+  "type": "custom",
+  "object_scheme": "hardReports",
+  "required_permissions": [],
+  "required_modules": []
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Документы",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Общий",
+      "article": "is_general",
+      "type": "char(1)",
+      "is_required": false,
+      "default": null
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(75)",
+      "is_required": false,
+      "default": null
+    },
+    {
+      "title": "Тип",
+      "article": "type_id",
+      "type": "int",
+      "is_required": false,
+      "default": null
+    },
+    {
+      "title": "Объект",
+      "article": "object",
+      "type": "varchar(75)",
+      "is_required": false,
+      "default": null
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "is_required": false,
+      "default": "Y"
+    },
+    {
+      "title": "Дата последнего изменения",
+      "article": "updated_at",
+      "type": "datetime",
+      "is_required": false,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

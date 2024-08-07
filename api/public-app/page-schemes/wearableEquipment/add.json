@@ -1,0 +1,59 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "users_get",
+    "users_add"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Оборудование - Добавление",
+        "title": [
+          "Добавление оборудования"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "wearableEquipment",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "title",
+                  "stores_id",
+                  "is_visible_in_schedule"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "wearableEquipment"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Транзакции",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Тип товара",
+      "article": "type",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Стоимость",
+      "article": "cost",
+      "type": "double",
+      "default": 0,
+      "is_required": "N"
+    },
+    {
+      "title": "Сумма скидки",
+      "article": "discount",
+      "type": "double",
+      "default": 0,
+      "is_required": "N"
+    },
+    {
+      "title": "Количество",
+      "article": "amount",
+      "type": "float",
+      "default": 0,
+      "is_required": "N"
+    },
+    {
+      "title": "ID объекта продажи",
+      "article": "product_id",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "ID продажи",
+      "article": "sale_id",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    }
+  ]
+}

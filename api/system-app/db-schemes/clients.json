@@ -1,0 +1,56 @@
+{
+  "title": "Клиенты",
+  "properties": [
+    {
+      "title": "Имя",
+      "article": "first_name",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Фамилия",
+      "article": "last_name",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Отчество",
+      "article": "patronymic",
+      "type": "varchar(75)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "type": "varchar(255)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "Телефон",
+      "article": "phone",
+      "type": "varchar(75)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "Дата и время создания",
+      "article": "created_at",
+      "type": "datetime",
+      "is_required": "N",
+      "default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "is_required": "N",
+      "default": "Y"
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

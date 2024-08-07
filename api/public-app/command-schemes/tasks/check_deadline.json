@@ -1,0 +1,7 @@
+{
+  "title": "роверка дедлайнов задач",
+  "type": "custom",
+  "object_scheme": "tasks",
+  "required_permissions": [],
+  "required_modules": []
+}

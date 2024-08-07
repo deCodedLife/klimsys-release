@@ -1,0 +1,7 @@
+{
+  "title": "Поиск",
+  "type": "search",
+  "object_scheme": "products",
+  "required_permissions": [],
+  "required_modules": []
+}

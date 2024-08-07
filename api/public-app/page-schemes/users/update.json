@@ -1,0 +1,423 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "users_get",
+    "users_update"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Сотрудники - Редактирование",
+        "title": [
+          "№ ",
+          ":id",
+          " ",
+          ":last_name",
+          " ",
+          ":first_name",
+          " ",
+          ":patronymic"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Табы",
+      "type": "tabs",
+      "size": 4,
+      "settings": {
+        "workDays":  {
+            "title": "График работы",
+            "body": [
+              {
+                "title": "График работы",
+                "type": "calendar",
+                "size": 4,
+                "settings": {
+                  "object": "workDays",
+                  "filters": [
+                    {
+                      "property": "user_id",
+                      "value": ":id"
+                    }
+                  ],
+                  "event_page": "workDays/addEvent",
+                  "events": {
+                    "add": "workDays/addEvent",
+                    "update": "workDays/updateActions"
+                  },
+                  "context_keys": [
+                    "store_id",
+                    "user_id"
+                  ]
+                },
+                "components": {
+                  "buttons": [
+                    {
+                      "type": "modal",
+                      "settings": {
+                        "title": "Добавить правило",
+                        "background": "dark",
+                        "page": "workDays/add",
+                        "close_previous_modal": true,
+                        "modal_size": "xl",
+                        "context": {
+                          "form": "users",
+                          "row_id": ":id"
+                        },
+                        "refresh_after_submit": true
+                      }
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "info":  {
+            "title": "Основная информация",
+            "body": [
+              {
+                "title": "Кол-во посещений",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "user_visits",
+                  "filters": [
+                    {
+                      "property": "user_id",
+                      "value": ":id"
+                    }
+                  ]
+                },
+                "components": []
+              },
+              {
+                "title": "Форма",
+                "type": "form",
+                "size": 4,
+                "settings": {
+                  "object": "users",
+                  "command": "update",
+                  "areas": [
+                    {
+                      "size": 2,
+                      "blocks": [
+                        {
+                          "title": "Основное",
+                          "fields": [
+                            "avatar",
+                            "last_name",
+                            "first_name",
+                            "patronymic",
+                            "gender",
+                            "birthday",
+                            "professions_id",
+                            "stores_id",
+                            "domru_login"
+                          ]
+                        },
+                        {
+                          "title": "Доступы",
+                          "fields": [
+                            "role_id",
+                            "email",
+                            "password"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "size": 2,
+                      "blocks": [
+                        {
+                          "title": "Документы",
+                          "fields": [
+                            "passport_series",
+                            "passport_number",
+                            "passport_issued",
+                            "snils",
+                            "inn"
+                          ]
+                        },
+                        {
+                          "title": "Контакты",
+                          "fields": [
+                            "phone",
+                            "second_phone",
+                            "address",
+                            "site_url"
+                          ]
+                        },
+                        {
+                          "title": "",
+                          "fields": [
+                            "is_visible_in_schedule",
+                            "is_queue",
+                            "is_visibleOnSite",
+                            "notify_clients",
+                            "is_prodoctorov"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "size": 4,
+                      "blocks": [
+                        {
+                          "title": "",
+                          "fields": [
+                            "comment"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "components": {
+                  "buttons": [
+                    {
+                      "type": "submit",
+                      "settings": {
+                        "title": "Сохранить",
+                        "background": "dark",
+                        "href": "users"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "salary":  {
+            "title": "Зарплата",
+            "required_permissions": [
+              "users_tab_salary"
+            ],
+            "body": [
+              {
+                "title": "Оклад",
+                "type": "form",
+                "size": 4,
+                "settings": {
+                  "areas": [
+                    {
+                      "size": 4,
+                      "blocks": [
+                        {
+                          "title": "",
+                          "fields": [
+                            "salary",
+                            "salary_type",
+                            "is_percent",
+                            "services_user_percents",
+                            "sales",
+                            "services",
+                            "promotions"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "object": "users",
+                  "command": "update"
+                },
+                "components": {
+                  "buttons": [
+                    {
+                      "type": "submit",
+                      "settings": {
+                        "title": "Сохранить",
+                        "background": "dark",
+                        "href": "users"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "salaryDetail":  {
+            "title": "Детальная информация по зарплате",
+            "required_permissions": [],
+            "body": [
+              {
+                "title": "Виджет информации о зарплате",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "salary_info",
+                  "filters": [
+                    {
+                      "property": "user_id",
+                      "value": ":id"
+                    }
+                  ]
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата (от)",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "Дата (до)",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Группа услуг",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "category",
+                        "donor_object": "serviceGroups",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    },
+                    {
+                      "title": "Услуга",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": true,
+                        "recipient_property": "service",
+                        "donor_object": "services",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "KPI",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_infinite": true,
+                  "link": false,
+                  "is_edit": false,
+                  "object": "kpi",
+                  "linked_filter": "analytic_widgets_salary_info",
+                  "filters": []
+                },
+                "components": []
+              },
+              {
+                "title": "Список оборудования",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "object": "visitsEquipmentSalary",
+                  "is_edit": false,
+                  "link": false,
+                  "linked_filter": "analytic_widgets_salary_info",
+                  "filters": []
+                },
+                "components": []
+              },
+              {
+                "title": "Список транзакций",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_infinite": true,
+                  "object": "visitsSalary",
+                  "is_edit": false,
+                  "link": false,
+                  "linked_filter": "analytic_widgets_salary_info",
+                  "filters": []
+                },
+                "components": []
+              }
+            ]
+          },
+        "calls":  {
+            "title": "История звонков",
+            "required_permissions": [
+              "users_tab_calls"
+            ],
+            "is_counter": true,
+            "body": [
+              {
+                "title": "История звонков",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "link": false,
+                  "object": "userCallHistory",
+                  "filters": [
+                    {
+                      "property": "user_id",
+                      "value": ":id"
+                    }
+                  ]
+                },
+                "components": []
+              }
+            ]
+          },
+        "logs":  {
+            "title": "Логи",
+            "required_permissions": [
+              "users_tab_logs"
+            ],
+            "body": [
+              {
+                "title": "Логи",
+                "type": "logs",
+                "size": 4,
+                "settings": {
+                  "object": "logs",
+                  "filters": [
+                    {
+                      "property": "users_id",
+                      "value": ":id"
+                    }
+                  ]
+                },
+                "components": []
+              }
+            ]
+          }
+      }
+    }
+  ]
+}

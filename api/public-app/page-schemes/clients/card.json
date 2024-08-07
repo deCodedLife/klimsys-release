@@ -1,0 +1,167 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Карточка клиента",
+        "title": [
+          "Клиент № ",
+          ":id"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Табы",
+      "type": "tabs",
+      "size": 4,
+      "settings": [
+        {
+          "title": "Основная информация",
+          "body": [
+            {
+              "title": "Форма клиента",
+              "type": "form",
+              "size": 4,
+              "settings": {
+                "close_after_submit": false,
+                "data": {
+                  "id": ":id"
+                },
+                "object": "clients",
+                "command": "update",
+                "areas": [
+                  {
+                    "size": 2,
+                    "blocks": [
+                      {
+                        "title": "Основное",
+                        "fields": [
+                          "last_name",
+                          "first_name",
+                          "patronymic",
+                          "gender",
+                          "birthday",
+                          "advertise_id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "size": 2,
+                    "blocks": [
+                      {
+                        "title": "Контакты",
+                        "fields": [
+                          "phone",
+                          "second_phone",
+                          "email",
+                          "address",
+                          "client_groups"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "size": 4,
+                    "blocks": [
+                      {
+                        "title": "",
+                        "fields": [
+                          "comment"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "components": {
+                "buttons": [
+                  {
+                    "type": "print",
+                    "settings": {
+                      "title": "Печать договора",
+                      "background": "dark",
+                      "data": {
+                        "script": {
+                          "object": "clientContracts",
+                          "command": "add",
+                          "properties": {
+                            "client_id": ":id",
+                            "user_id": ":user_id",
+                            "document_id": "17"
+                          }
+                        },
+                        "is_edit": true,
+                        "document_article": "17",
+                        "scheme_name": "visits",
+                        "row_id": ":id"
+                      }
+                    }
+                  },
+                  {
+                    "type": "modal",
+                    "settings": {
+                      "title": "Добавить задачу",
+                      "background": "dark",
+                      "icon": "",
+                      "page": "tasks/add",
+                      "context": {
+                        "form": "clients",
+                        "row_id": ":id"
+                      }
+                    }
+                  },
+                  {
+                    "type": "submit",
+                    "settings": {
+                      "title": "Сохранить",
+                      "background": "dark",
+                      "href": "dashboard"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Логи",
+          "body": [
+            {
+              "title": "Логи",
+              "type": "logs",
+              "size": 4,
+              "settings": {
+                "object": "logs",
+                "filters": [
+                  {
+                    "property": "clients_id",
+                    "value": ":id"
+                  }
+                ]
+              },
+              "components": {
+                "filters": [
+                  {
+                    "title": "Дата",
+                    "type": "date",
+                    "required_permissions": [],
+                    "required_modules": [],
+                    "settings": {
+                      "recipient_property": "created_at"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

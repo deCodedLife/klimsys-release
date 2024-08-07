@@ -1,0 +1,34 @@
+{
+  "title": "Сообщения в задачах",
+  "properties": [{
+    "title": "Задача",
+    "article": "task_id",
+    "type": "int",
+    "default": null,
+    "is_required": "Y"
+  }, {
+    "title": "Автор сообщения",
+    "article": "author_id",
+    "type": "int",
+    "default": null,
+    "is_required": "Y"
+  }, {
+    "title": "Тело сообщения",
+    "article": "message",
+    "type": "varchar(255)",
+    "default": null,
+    "is_required": "Y"
+  }, {
+    "title": "Прочитано",
+    "article": "is_readed",
+    "type": "char(1)",
+    "default": "N",
+    "is_required": "N"
+  }, {
+    "title": "Дата и время создания сообщения",
+    "article": "created_at",
+    "type": "datetime",
+    "default": "CURRENT_TIMESTAMP",
+    "is_required": "Y"
+  }]
+}

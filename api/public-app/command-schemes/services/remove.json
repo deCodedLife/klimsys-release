@@ -1,0 +1,7 @@
+{
+  "title": "Удаление",
+  "type": "remove",
+  "object_scheme": "services",
+  "required_permissions": ["services_remove"],
+  "required_modules": []
+}

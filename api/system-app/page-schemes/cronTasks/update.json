@@ -1,0 +1,75 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "support"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "CRON - редактирование",
+        "title": [
+          ":title"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "cronTasks",
+        "command": "update",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "title",
+                  "run_configuration",
+                  "object",
+                  "command",
+                  "argv"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 1,
+            "blocks": [
+              {
+                "title": "Настройки",
+                "fields": [
+                  "start_at",
+                  "month",
+                  "days",
+                  "hours",
+                  "minutes"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "cronTasks"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

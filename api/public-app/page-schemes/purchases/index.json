@@ -1,0 +1,63 @@
+{
+  "required_modules": [],
+  "required_permissions": ["purchases_get"],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Редактирование",
+        "title": [
+          "Закупки"
+        ]
+      },
+      "components":[]
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "object": "purchases"
+      },
+      "components": {
+        "filters": [
+          {
+            "title": "Поставщик",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "recipient_property": "provider_id",
+              "donor_object": "providers",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          },
+          {
+            "title": "Филиал",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "recipient_property": "store_id",
+              "donor_object": "stores",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить закупку",
+              "page": "purchases/add"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

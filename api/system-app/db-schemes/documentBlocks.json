@@ -1,0 +1,35 @@
+{
+  "title": "Блоки документов",
+  "properties": [
+    {
+      "title": "ID документа",
+      "article": "document_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Позиция блока",
+      "article": "block_position",
+      "type": "int",
+      "is_required": false,
+      "default": 0
+    },
+    {
+      "title": "Тип блока",
+      "article": "block_type",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "ID блока",
+      "article": "block_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Пользователи - Роли",
+  "properties": [
+    {
+      "title": "Пользователь",
+      "article": "user_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Роль",
+      "article": "role_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

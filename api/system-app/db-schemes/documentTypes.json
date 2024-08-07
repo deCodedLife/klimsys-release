@@ -1,0 +1,27 @@
+{
+  "title": "Документы",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    }
+  ],
+  "rows_key": "article",
+  "rows": [
+    {
+      "id": 1,
+      "title": "Шаблон",
+      "article": "template"
+    }
+  ]
+}

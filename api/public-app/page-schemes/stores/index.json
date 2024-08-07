@@ -1,0 +1,33 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [{
+    "title": "Шапка",
+    "type": "header",
+    "size": 4,
+    "settings": {
+      "description": "Филиалы",
+      "title": ["Филиалы"]
+    },
+    "components": {
+      "buttons": []
+    }
+  }, {
+    "title": "Список",
+    "type": "list",
+    "size": 4,
+    "settings": {
+      "object": "stores"
+    },
+    "components": {
+      "buttons": [{
+        "type": "href",
+        "settings": {
+          "title": "Добавление филиала",
+          "background": "dark",
+          "page": "stores/add"
+        }
+      }]
+    }
+  }]
+}

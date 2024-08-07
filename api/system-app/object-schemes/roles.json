@@ -1,0 +1,83 @@
+{
+  "title": "Роли",
+  "table": "roles",
+  "search": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update" ],
+      "require_in_commands": [ "add" ]
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update" ],
+      "require_in_commands": [ "add" ]
+    },
+    {
+      "title": "Доступы",
+      "article": "permissions",
+      "data_type": "array",
+      "field_type": "list",
+      "settings": {
+        "is_multiply": true,
+        "is_search": false
+      },
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": ["get", "add", "update" ],
+      "require_in_commands": [],
+      "join": {
+        "connection_table": "roles_permissions",
+        "donor_table": "permissions",
+        "property_article": "title",
+        "insert_property": "role_id",
+        "filter_property": "permission_id"
+      }
+    },
+    {
+      "title": "Типы уведомлений",
+      "article": "notificationTypes",
+      "data_type": "array",
+      "field_type": "list",
+      "settings": {
+        "is_multiply": true,
+        "is_search": false
+      },
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update" ],
+      "require_in_commands": [],
+      "join": {
+        "connection_table": "roles_notificationTypes",
+        "donor_table": "notificationTypes",
+        "property_article": "title",
+        "insert_property": "role_id",
+        "filter_property": "notificationType_id"
+      }
+    }
+  ]
+}

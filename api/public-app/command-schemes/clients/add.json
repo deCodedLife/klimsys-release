@@ -1,0 +1,7 @@
+{
+  "title": "Добавление",
+  "type": "add",
+  "object_scheme": "clients",
+  "required_permissions": [],
+  "required_modules": []
+}

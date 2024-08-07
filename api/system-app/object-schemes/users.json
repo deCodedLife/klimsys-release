@@ -1,0 +1,126 @@
+{
+  "title": "Сотрудники",
+  "table": "users",
+  "search": "",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Аватар",
+      "article": "avatar",
+      "data_type": "image",
+      "field_type": "image",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_variable": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update" ],
+      "require_in_commands": [],
+      "settings": {
+        "is_multiply": false
+      }
+    },
+    {
+      "title": "Имя",
+      "article": "first_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "in_search": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update" ],
+      "require_in_commands": [ "add" ]
+    },
+    {
+      "title": "Фамилия",
+      "article": "last_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update" ],
+      "require_in_commands": [ "add" ]
+    },
+    {
+      "title": "Отчество",
+      "article": "patronymic",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update" ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "data_type": "email",
+      "field_type": "email",
+      "is_default_in_list": true,
+      "is_unique": true,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update", "sign-in", "sign-up", "forgot-password" ],
+      "require_in_commands": [ "add", "sign-in", "sign-up", "forgot-password" ]
+    },
+    {
+      "title": "Пароль",
+      "article": "password",
+      "data_type": "password",
+      "field_type": "password",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update", "sign-in", "sign-up" ],
+      "require_in_commands": [ "add", "sign-in", "sign-up" ]
+    },
+    {
+      "title": "Роль",
+      "article": "role_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "settings": {
+        "is_multiply": false,
+        "is_search": false
+      },
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [ "get", "add", "update", "get" ],
+      "require_in_commands": [ "add" ],
+      "list_donor": {
+        "table": "roles",
+        "properties_title": "title"
+      }
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Редактировать сотрудника",
+        "page": "users/update",
+        "is_row_id_in_page": true,
+        "icon": "",
+        "background": "dark"
+      },
+      "required_permissions": [],
+      "required_modules": []
+    }
+  ]
+}

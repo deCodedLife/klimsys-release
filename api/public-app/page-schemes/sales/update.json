@@ -1,0 +1,60 @@
+{
+    "required_modules": [],
+    "required_permissions": [],
+    "structure": [
+        {
+            "title": "Продажа",
+            "type": "form",
+            "size": 4,
+            "settings": {
+                "object": "sales",
+                "command": "update",
+                "areas": [
+                    {
+                        "size": 2,
+                        "blocks": [
+                            {
+                                "title": "",
+                                "fields": [
+                                    "cash_sum",
+                                    "card_sum",
+                                    "summary",
+                                    "visits_ids",
+                                    "pay_object",
+                                    "pay_method"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "size": 2,
+                        "blocks": [
+                            {
+                                "title": "",
+                                "fields": [
+                                    "store_id",
+                                    "bonus_sum",
+                                    "deposit_sum",
+                                    "online_receipt",
+                                    "terminal_code"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "components": {
+                "buttons": [
+                    {
+                        "type": "submit",
+                        "settings": {
+                            "title": "Вернуть",
+                            "href": "",
+                            "background": "dark"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

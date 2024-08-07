@@ -1,0 +1,82 @@
+{
+  "title": "Филиалы",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "График работы (от)",
+      "article": "schedule_from",
+      "type": "time",
+      "default": "00:00",
+      "is_required": "Y"
+    },
+    {
+      "title": "График работы (до)",
+      "article": "schedule_to",
+      "type": "time",
+      "default": "00:00",
+      "is_required": "Y"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "default": "Y",
+      "is_required": "Y"
+    },
+    {
+      "title": "Есть электронная очередь",
+      "article": "is_queue",
+      "type": "char(1)",
+      "default": "N",
+      "is_required": "N"
+    },
+    {
+      "title": "Есть операционный кабинет",
+      "article": "is_operating",
+      "type": "char(1)",
+      "default": "N",
+      "is_required": "N"
+    },
+    {
+      "title": "Имя клиники",
+      "article": "name",
+      "type": "varchar(255)",
+      "default": "DocaCRM",
+      "is_required": "N"
+    },
+    {
+      "title": "Имя клиники в продокторов",
+      "article": "prodoctorov_article",
+      "type": "varchar(255)",
+      "default": "DOCA clinic",
+      "is_required": "N"
+    },
+    {
+      "title": "Адрес",
+      "article": "address",
+      "type": "varchar(255)",
+      "default": "Нижний Новгород, ул. Совхозная, 13, корпус \"В\" офис. 21",
+      "is_required": "N"
+    },
+    {
+      "title": "Ссылка на картах",
+      "article": "map",
+      "type": "varchar(255)",
+      "default": "https://maps.app.goo.gl/gm6hfeaHkhi21qUZ9",
+      "is_required": "N"
+    },
+    {
+      "title": "Контактный номер",
+      "article": "phone",
+      "type": "varchar(255)",
+      "default": "8(800) 511-48-25",
+      "is_required": "N"
+    }
+  ]
+}

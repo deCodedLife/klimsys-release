@@ -1,0 +1,49 @@
+{
+  "title": "Уведомления",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "varchar(255)",
+      "is_required": false,
+      "default": null
+    },
+    {
+      "title": "Статус",
+      "article": "status",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Ссылка",
+      "article": "href",
+      "type": "varchar(255)",
+      "is_required": false,
+      "default": null
+    },
+    {
+      "title": "Получатель",
+      "article": "user_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Дата и время создания",
+      "article": "created_at",
+      "type": "datetime",
+      "is_required": false,
+      "default": "CURRENT_TIMESTAMP"
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

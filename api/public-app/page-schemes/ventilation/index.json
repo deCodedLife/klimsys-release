@@ -1,0 +1,68 @@
+{
+  "required_modules": [],
+  "required_permissions": [ "products_get" ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Вентиляция"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "object": "ventilation"
+      },
+      "components": {
+        "search": true,
+        "filters": [
+          {
+            "title": "Категория",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "type",
+              "donor_object": "productCategories",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark",
+              "page": "products/add"
+            }
+          },
+          {
+            "type": "modal",
+            "settings": {
+              "size": "xl",
+              "title": "Импорт",
+              "background": "dark",
+              "page": "products/import",
+              "context": {
+                "type": "import"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

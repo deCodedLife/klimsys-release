@@ -1,0 +1,1 @@
+{"title":"Расходники","properties":[{"title":"Услуга","article":"row_id","type":"int","default":null,"is_required":"N"},{"title":"Расходник","article":"consumable_id","type":"int","default":null,"is_required":"N"},{"title":"Количество","article":"count","type":"int","default":"0","is_required":"Y"}]}

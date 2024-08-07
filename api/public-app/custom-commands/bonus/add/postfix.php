@@ -1,0 +1,3 @@
+<?php
+
+$API->addEvent( "bonusHistory" );

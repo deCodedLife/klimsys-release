@@ -1,0 +1,96 @@
+{
+  "title": "Товары",
+  "properties": [
+    {
+      "title": "Производитель",
+      "article": "manufacturer",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Серия",
+      "article": "series",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Модель",
+      "article": "model",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Изображение",
+      "article": "image",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "text",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Тип",
+      "article": "type",
+      "type": "int",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Цена",
+      "article": "price",
+      "type": "float",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Тип управления",
+      "article": "control_type",
+      "type": "int",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Фреон",
+      "article": "freon",
+      "type": "int",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Мощность охлаждения",
+      "article": "cooling_power",
+      "type": "varchar(50)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Мощность нагрева",
+      "article": "heating_power",
+      "type": "varchar(512)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Тип товара",
+      "article": "product_type",
+      "type": "varchar(512)",
+      "default": "household",
+      "is_required": "Y"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "default": "Y",
+      "is_required": "Y"
+    }
+  ]
+}

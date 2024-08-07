@@ -1,0 +1,1 @@
+{"title":"История депозитов","properties":[{"title":"ID  сотрудника","article":"user_id","type":"int","default":null,"is_required":"N"},{"title":"ID клиента","article":"client_id","type":"int","default":null,"is_required":"N"},{"title":"Пополнено","article":"replenished","type":"float","default":null,"is_required":"N"}]}

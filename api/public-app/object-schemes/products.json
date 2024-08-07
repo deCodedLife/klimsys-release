@@ -1,0 +1,332 @@
+{
+  "title": "Товары",
+  "table": "products",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Тип товара",
+      "article": "product_type",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "import_list": [
+        {
+          "title": "Бытовые",
+          "value": "household"
+        },
+        {
+          "title": "Полу-промышленные",
+          "value": "semi_industrial"
+        },
+        {
+          "title": "Промышленные",
+          "value": "industrial"
+        },
+        {
+          "title": "Вентиляция",
+          "value": "ventilation"
+        }
+      ],
+      "custom_list": [
+        {
+          "title": "Бытовые",
+          "value": "household"
+        },
+        {
+          "title": "Полу-промышленные",
+          "value": "semi_industrial"
+        },
+        {
+          "title": "Промышленные",
+          "value": "industrial"
+        },
+        {
+          "title": "Вентиляция",
+          "value": "ventilation"
+        }
+      ],
+      "use_in_commands": [
+        "update",
+        "get",
+        "add",
+        "import"
+      ],
+      "require_in_commands": [ "add" ]
+    },
+    {
+      "title": "Изображение",
+      "article": "image",
+      "data_type": "image",
+      "field_type": "image",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "require_in_commands": [],
+      "use_in_commands": [
+        "update",
+        "get",
+        "search",
+        "add"
+      ]
+    },
+    {
+      "title": "Производитель",
+      "article": "manufacturer",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "require_in_commands": [
+        "add"
+      ],
+      "use_in_commands": [
+        "update",
+        "get",
+        "search",
+        "add",
+        "import"
+      ],
+      "import_list": [
+        {
+          "title": "Kentatsu",
+          "value": 1
+        }
+      ],
+      "list_donor": {
+        "table": "providers",
+        "properties_title": "title"
+      }
+    },
+    {
+      "title": "Серия",
+      "article": "series",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "require_in_commands": [
+        "add"
+      ],
+      "use_in_commands": [
+        "update",
+        "get",
+        "search",
+        "add",
+        "import"
+      ]
+    },
+    {
+      "title": "Модель",
+      "article": "model",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "require_in_commands": [
+        "add"
+      ],
+      "use_in_commands": [
+        "update",
+        "get",
+        "search",
+        "add",
+        "import"
+      ]
+    },
+    {
+      "title": "Тип",
+      "article": "type",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": true,
+      "list_donor": {
+        "table": "productCategories",
+        "properties_title": "title"
+      },
+      "import_list": [
+        {
+          "title": "Настенная сплит система",
+          "value": 1
+        },
+        {
+          "title": "Наружные блоки мульти-системы",
+          "value": 2
+        },
+        {
+          "title": "Внутренние блоки мульти-системы",
+          "value": 3
+        },
+        {
+          "title": "Коммерческая сплит-система",
+          "value": 4
+        }
+      ],
+      "use_in_commands": [
+        "update",
+        "remove",
+        "get",
+        "add",
+        "import"
+      ]
+    },
+    {
+      "title": "Тип управления",
+      "article": "control_type",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": true,
+      "list_donor": {
+        "table": "controlTypes",
+        "properties_title": "title"
+      },
+      "import_list": [
+        {
+          "title": "FULL DC inverter",
+          "value": 1
+        },
+        {
+          "title": "DC inverter",
+          "value": 2
+        },
+        {
+          "title": "on/off",
+          "value": 3
+        }
+      ],
+      "use_in_commands": [
+        "update",
+        "remove",
+        "get",
+        "add",
+        "import"
+      ]
+    },
+    {
+      "title": "Фреон",
+      "article": "freon",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": true,
+      "list_donor": {
+        "table": "freonTypes",
+        "properties_title": "title"
+      },
+      "import_list": [
+        {
+          "title": "R32",
+          "value": 1
+        },
+        {
+          "title": "R410a",
+          "value": 2
+        },
+        {
+          "title": "R410A",
+          "value": 3
+        }
+      ],
+      "use_in_commands": [
+        "update",
+        "remove",
+        "get",
+        "add",
+        "import"
+      ]
+    },
+    {
+      "title": "Цена",
+      "article": "price",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add",
+        "import"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "settings": {
+        "rows": 4
+      },
+      "data_type": "string",
+      "field_type": "textarea",
+      "is_default_in_list": false,
+      "ignoreInLogs": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_disabled": false,
+      "is_variable": false,
+      "use_in_commands": [
+        "add",
+        "update",
+        "import"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Мощность охлаждения",
+      "article": "cooling_power",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add",
+        "import"
+      ],
+      "require_in_commands": [
+      ]
+    },
+    {
+      "title": "Мощность нагрева",
+      "article": "heating_power",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add",
+        "import"
+      ],
+      "require_in_commands": [
+      ]
+    }
+  ]
+}

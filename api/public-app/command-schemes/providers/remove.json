@@ -1,0 +1,1 @@
+{"title":"Удалить поставщика","type":"remove","object_scheme":"providers","modules":[],"required_permissions":["settings_providers"],"no_limit":false}

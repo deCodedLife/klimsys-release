@@ -1,0 +1,99 @@
+{
+  "title": "Пользователи",
+  "properties": [
+    {
+      "title": "Аватар",
+      "article": "avatar",
+      "type": "varchar(255)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "Имя",
+      "article": "first_name",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Фамилия",
+      "article": "last_name",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Отчество",
+      "article": "patronymic",
+      "type": "varchar(75)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "type": "varchar(255)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Телефон",
+      "article": "phone",
+      "type": "varchar(75)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "Пароль",
+      "article": "password",
+      "type": "varchar(255)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "ID роли",
+      "article": "role_id",
+      "type": "int",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Дата и время создания",
+      "article": "created_at",
+      "type": "datetime",
+      "is_required": "N",
+      "default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "is_required": "N",
+      "default": "Y"
+    }
+  ],
+  "rows_key": "email",
+  "rows": [
+    {
+      "first_name": "Юрий",
+      "last_name": "Швец",
+      "patronymic": "Александрович",
+      "email": "yura@klimsystems.ru",
+      "password": "d0b3f747676b9628afc4bb3264a92a4f",
+      "phone": "79788477197",
+      "role_id": 1,
+      "is_system": "N",
+      "is_active": "Y"
+    },
+    {
+      "first_name": "Сайт",
+      "last_name": "OxBox",
+      "email": "public@oxbox.ru",
+      "password": "36bae73a097c392739d9f5bfcfb2f067",
+      "phone": "78005114825",
+      "role_id": 3,
+      "is_system": "Y",
+      "is_active": "Y"
+    }
+  ]
+}

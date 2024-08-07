@@ -1,0 +1,262 @@
+{
+  "title": "Клиенты",
+  "table": "clients",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "ID",
+      "article": "id",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_variable": true,
+      "is_visible": false,
+      "use_in_commands": [
+        "update",
+        "get"
+      ],
+      "require_in_commands": [
+        "remove"
+      ]
+    },
+    {
+      "title": "ФИО",
+      "article": "fio",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": false,
+      "use_in_commands": [ "get"],
+      "require_in_commands": []
+    },
+    {
+      "title": "Фамилия",
+      "article": "last_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "import"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Имя",
+      "article": "first_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "import"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Отчество",
+      "article": "patronymic",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": true,
+      "use_in_commands": [
+        "get",
+        "hook",
+        "add",
+        "update",
+        "import"
+      ]
+    },
+    {
+      "title": "Телефон",
+      "article": "phone",
+      "data_type": "phone",
+      "field_type": "phone",
+      "is_default_in_list": true,
+      "is_unique": true,
+      "is_hook": true,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "hook",
+        "update",
+        "import"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "data_type": "email",
+      "field_type": "email",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "import"
+      ]
+    },
+    {
+      "title": "Дополнительный телефон",
+      "article": "second_phone",
+      "data_type": "phone",
+      "field_type": "phone",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "import"
+      ]
+    },
+    {
+      "title": "Адрес",
+      "article": "address",
+      "data_type": "string",
+      "field_type": "dadata_address",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "import"
+      ]
+    },
+    {
+      "title": "Пол",
+      "article": "gender",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "hook",
+        "update",
+        "import"
+      ],
+      "custom_list": [
+        {
+          "title": "Мужской",
+          "value": "M"
+        },
+        {
+          "title": "Женский",
+          "value": "W"
+        }
+      ]
+    },
+    {
+      "title": "Комментарий",
+      "article": "comment",
+      "data_type": "string",
+      "field_type": "textarea",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Дата и время создания",
+      "article": "created_at",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "get"
+      ]
+    },
+    {
+      "title": "Черный список",
+      "article": "is_blacklist",
+      "data_type": "boolean",
+      "field_type": "checkbox",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "use_in_commands": [
+        "update",
+        "get",
+        "import"
+      ]
+    },
+    {
+      "title": "Подписан договор",
+      "article": "is_contract",
+      "data_type": "boolean",
+      "field_type": "checkbox",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_in_search": false,
+      "use_in_commands": [
+        "get"
+      ]
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Изменить",
+        "page": [
+          "clients/update/",
+          ":id"
+        ],
+        "icon": "gear",
+        "background": "dark"
+      }
+    },
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "background": "dark",
+        "icon": "trash",
+        "object": "clients",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Кассы Атол",
+  "properties": [
+    {
+      "title": "Филиал",
+      "article": "store_id",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "ID кассы",
+      "article": "cashbox_id",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    }
+  ]
+}

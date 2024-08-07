@@ -1,0 +1,14 @@
+{
+  "title": "Страницы",
+  "table": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Страница",
+      "article": "page",
+      "data_type": "string",
+      "use_in_commands": [ "get" ],
+      "require_in_commands": [ "get" ]
+    }
+  ]
+}

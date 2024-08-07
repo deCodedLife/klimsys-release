@@ -1,0 +1,7 @@
+{
+  "title": "Удаление файла",
+  "type": "custom",
+  "object_scheme": "files",
+  "required_permissions": [],
+  "required_modules": []
+}

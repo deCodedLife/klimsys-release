@@ -1,0 +1,28 @@
+{
+  "title": "Высоконагруженные отчеты (кэш)",
+  "properties": [
+    {
+      "title": "ID отчета",
+      "article": "report_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Св-во",
+      "article": "property_article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Св-во (значение)",
+      "article": "property_value",
+      "type": "varchar(255)",
+      "is_required": false,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

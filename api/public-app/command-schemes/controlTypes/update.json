@@ -1,0 +1,7 @@
+{
+  "title": "Изменить тип товаров",
+  "type": "update",
+  "object_scheme": "controlTypes",
+  "modules": [],
+  "no_limit": false
+}

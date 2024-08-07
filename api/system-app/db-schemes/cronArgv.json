@@ -1,0 +1,26 @@
+{
+  "title": "Крон задачи",
+  "properties": [
+    {
+      "title": "ID задачи",
+      "article": "row_id",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Параметр",
+      "article": "property",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Значение",
+      "article": "value",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    }
+  ]
+}

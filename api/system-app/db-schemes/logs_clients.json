@@ -1,0 +1,21 @@
+{
+  "title": "Логи - Клиенты",
+  "properties": [
+    {
+      "title": "ID лога",
+      "article": "log_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "ID клиента",
+      "article": "client_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

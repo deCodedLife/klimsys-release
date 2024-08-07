@@ -1,0 +1,43 @@
+{
+  "properties": [
+    {
+      "title": "Файл",
+      "article": "import_file",
+      "data_type": "file",
+      "field_type": "file",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "is_variable": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get"
+      ],
+      "require_in_commands": [],
+      "settings": {
+        "allowed_formats": [
+          "xlx",
+          "xlsx"
+        ],
+        "max_size": 104857600,
+        "is_multiply": false
+      }
+    },
+    {
+      "title": "Поля",
+      "article": "import_headers",
+      "data_type": "string",
+      "field_type": "layout",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "in_search": true,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get"
+      ]
+    }
+  ]
+}

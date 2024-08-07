@@ -1,0 +1,7 @@
+{
+  "title": "ID последнего события",
+  "type": "get",
+  "object_scheme": "events",
+  "required_permissions": [],
+  "required_modules": []
+}

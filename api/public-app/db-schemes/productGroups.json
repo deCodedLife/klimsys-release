@@ -1,0 +1,12 @@
+{
+  "title": "Группы товаров",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    }
+  ]
+}

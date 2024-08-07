@@ -1,0 +1,62 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Основные настройки",
+        "title": [
+          "Основные настройки"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "settings",
+        "command": "update",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Телефония",
+                "fields": [
+                  "crm_name",
+                  "crm_url",
+                  "token"
+                ]
+              },
+              {
+                "title": "Электронная очередь",
+                "fields": [
+                  "folder_id"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "settings"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

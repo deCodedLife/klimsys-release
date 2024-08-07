@@ -1,0 +1,7 @@
+{
+  "title": "Добавить тип товаров",
+  "type": "add",
+  "object_scheme": "controlTypes",
+  "modules": [],
+  "no_limit": false
+}

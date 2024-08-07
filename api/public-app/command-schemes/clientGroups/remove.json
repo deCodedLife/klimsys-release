@@ -1,0 +1,7 @@
+{
+  "title": "Удаление",
+  "type": "remove",
+  "object_scheme": "clientGroups",
+  "required_permissions": ["settings_client_groups"],
+  "required_modules": []
+}

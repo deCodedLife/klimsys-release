@@ -1,0 +1,7 @@
+{
+  "title": "Вывод",
+  "type": "import_headers",
+  "object_scheme": "products",
+  "required_permissions": [],
+  "required_modules": []
+}

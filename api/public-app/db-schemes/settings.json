@@ -1,0 +1,40 @@
+{
+  "title": "Общие настройки",
+  "properties": [
+    {
+      "title": "Название CRM",
+      "article": "crm_name",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Ссылка на CRM",
+      "article": "crm_url",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Токен",
+      "article": "token",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "ID папки (Я.Speech)",
+      "article": "folder_id",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    }
+  ],
+  "row_key": "id",
+  "rows": [
+    {
+      "id": 1,
+      "is_system": "N"
+    }
+  ]
+}

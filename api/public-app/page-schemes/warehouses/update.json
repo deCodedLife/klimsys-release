@@ -1,0 +1,51 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Изменение колличества",
+        "title": [
+          "Складские остатки"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "warehouses",
+        "command": "update",
+        "areas": [
+          {
+            "size": 1,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "count"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "href": "consumables"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

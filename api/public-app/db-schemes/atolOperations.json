@@ -1,0 +1,33 @@
+{
+  "title": "Операции по кассе",
+  "properties": [
+    {
+      "title": "Касса",
+      "article": "cashbox_id",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Тип",
+      "article": "type",
+      "type": "varchar(15)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Дата",
+      "article": "created_at",
+      "type": "datetime",
+      "default": "CURRENT_TIMESTAMP",
+      "is_required": "Y"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "default": "Y",
+      "is_required": "Y"
+    }
+  ]
+}

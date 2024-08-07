@@ -1,0 +1,55 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "clients_get"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Клиенты",
+        "title": [
+          "Клиенты"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "is_infinite": true,
+        "object": "clients"
+      },
+      "components": {
+        "search": true,
+        "filters": [],
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить клиента",
+              "background": "dark",
+              "page": "clients/add"
+            }
+          },
+          {
+            "type": "modal",
+            "settings": {
+              "size": "xl",
+              "title": "Импорт",
+              "background": "dark",
+              "page": "clients/import",
+              "context": {
+                "type": "import"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

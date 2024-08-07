@@ -1,0 +1,54 @@
+{
+  "title": "Услуги",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "text",
+      "default": "",
+      "is_required": "N"
+    },
+    {
+      "title": "Цена",
+      "article": "price",
+      "type": "float",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Зависимая услуга",
+      "article": "depend_from",
+      "type": "int",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "default": "Y",
+      "is_required": "Y"
+    },
+    {
+      "title": "Количество",
+      "article": "count",
+      "type": "int",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Тип",
+      "article": "service_type",
+      "type": "varchar(32)",
+      "default": "conditioners",
+      "is_required": "Y"
+    }
+  ]
+}

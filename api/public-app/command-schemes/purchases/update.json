@@ -1,0 +1,7 @@
+{
+    "title": "Редактирование",
+    "type": "update",
+    "object_scheme": "purchases",
+    "required_permissions": ["purchases_update"],
+    "required_modules": []
+}

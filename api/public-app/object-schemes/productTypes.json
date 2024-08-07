@@ -1,0 +1,42 @@
+{
+  "title": "Типы товаров",
+  "table": "productTypes",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "get",
+        "update"
+      ]
+    }
+  ],
+  "action_buttons": [{
+    "type": "href",
+    "settings": {
+      "title": "Изменить",
+      "page": ["productTypes/update/", ":id"],
+      "icon": "gear",
+      "background": "dark"
+    }
+  }, {
+    "type": "script",
+    "settings": {
+      "title": "Удалить",
+      "background": "dark",
+      "icon": "trash",
+      "object": "productTypes",
+      "command": "remove",
+      "data": {
+        "id": ":id"
+      }
+    }
+  }]
+}

@@ -1,0 +1,59 @@
+{
+    "required_modules": [],
+    "required_permissions": ["purchases_get", "purchases_add"],
+    "structure": [
+        {
+            "title": "Шапка",
+            "type": "header",
+            "size": 4,
+            "settings": {
+                "description": "Добавление",
+                "title": [
+                    "Закупки"
+                ]
+            },
+            "components": []
+        },
+        {
+            "title": "Форма",
+            "type": "form",
+            "size": 4,
+            "settings": {
+                "object": "purchases",
+                "command": "add",
+                "areas": [
+                    {
+                        "size": 4,
+                        "blocks": [
+                            {
+                                "title": "Основная информация",
+                                "fields": [
+                                    "created_at",
+                                    "store_id",
+                                    "provider_id",
+                                    "purchaseType",
+                                    "purchases_products",
+                                    "purchases_consumables",
+                                    "deliveryPrice",
+                                    "price"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "components": {
+                "buttons": [
+                    {
+                        "type": "submit",
+                        "settings": {
+                            "title": "Добавить",
+                            "background": "dark",
+                            "href": "purchases"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

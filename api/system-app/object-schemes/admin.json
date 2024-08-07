@@ -1,0 +1,140 @@
+{
+  "title": "Административные команды",
+  "table": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Токен",
+      "article": "token",
+      "data_type": "string",
+      "use_in_commands": [
+        "update-db",
+        "git-push-commit",
+        "update-sphinx"
+      ],
+      "require_in_commands": [
+        "update-db",
+        "git-push-commit",
+        "update-sphinx"
+      ]
+    },
+    {
+      "title": "Тестовый режим",
+      "article": "is_test",
+      "data_type": "boolean",
+      "use_in_commands": [
+        "update-db",
+        "git-push-commit"
+      ],
+      "require_in_commands": [
+        "update-db"
+      ]
+    },
+    {
+      "title": "Тип схемы (command, db, object, page)",
+      "article": "scheme_type",
+      "data_type": "string",
+      "use_in_commands": [
+        "get",
+        "get-schemes",
+        "update-scheme",
+        "remove-scheme"
+      ],
+      "require_in_commands": [
+        "update-scheme",
+        "remove-scheme"
+      ]
+    },
+    {
+      "title": "Название схемы",
+      "article": "scheme_name",
+      "data_type": "string",
+      "use_in_commands": [
+        "get",
+        "get-schemes",
+        "update-scheme",
+        "remove-scheme",
+        "group-update-fields",
+        "get-variables-value",
+        "image-load"
+      ],
+      "require_in_commands": [
+        "update-scheme",
+        "remove-scheme",
+        "group-update-fields",
+        "get-variables-value",
+        "image-load"
+      ]
+    },
+    {
+      "title": "ID записи",
+      "article": "row_id",
+      "data_type": "integer",
+      "use_in_commands": [
+        "get",
+        "get-variables-value"
+      ],
+      "require_in_commands": [
+        "get-variables-value"
+      ]
+    },
+    {
+      "title": "Ключ изображения",
+      "article": "image_key",
+      "data_type": "string",
+      "use_in_commands": [
+        "get",
+        "image-load"
+      ],
+      "require_in_commands": [
+        "image-load"
+      ]
+    },
+    {
+      "title": "Изображение",
+      "article": "image",
+      "data_type": "image",
+      "use_in_commands": [
+        "get",
+        "image-load"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Тело схемы",
+      "article": "scheme_body",
+      "data_type": "string",
+      "use_in_commands": [
+        "get",
+        "update-scheme",
+        "update-user-scheme"
+      ],
+      "require_in_commands": [
+        "update-scheme",
+        "update-user-scheme"
+      ]
+    },
+    {
+      "title": "Обновление настроек",
+      "article": "settings",
+      "data_type": "array",
+      "use_in_commands": [
+        "update-settings"
+      ],
+      "require_in_commands": [
+        "update-settings"
+      ]
+    },
+    {
+      "title": "Коммит",
+      "article": "commit",
+      "data_type": "string",
+      "use_in_commands": [
+        "git-push-commit"
+      ],
+      "require_in_commands": [
+        "git-push-commit"
+      ]
+    }
+  ]
+}

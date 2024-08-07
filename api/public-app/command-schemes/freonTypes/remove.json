@@ -1,0 +1,7 @@
+{
+  "title": "Удалить тип товаров",
+  "type": "remove",
+  "object_scheme": "freonTypes",
+  "modules": [],
+  "no_limit": false
+}

@@ -1,0 +1,22 @@
+{
+  "top": [],
+  "side": [
+    {
+      "title": "Панель управления",
+      "href": "dashboard",
+      "children": [],
+      "icon": "garage"
+    },
+    {
+      "title": "Настройки",
+      "href": "settings",
+      "children": [
+        {
+          "title": "Роли",
+          "href": "roles"
+        }
+      ],
+      "icon": "gear"
+    }
+  ]
+}

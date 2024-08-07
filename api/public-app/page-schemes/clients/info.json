@@ -1,0 +1,88 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Клиенты - Просмотр",
+        "title": [
+          "№ ",
+          ":id",
+          " ",
+          ":last_name",
+          " ",
+          ":last_name",
+          " ",
+          ":patronymic"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "info",
+      "size": 4,
+      "settings": {
+        "object": "clients",
+        "command": "get",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "last_name",
+                  "first_name",
+                  "patronymic",
+                  "gender",
+                  "birthday",
+                  "advertise_id"
+                ]
+              },
+              {
+                "title": "Контакты",
+                "fields": [
+                  "phone",
+                  "second_phone",
+                  "email",
+                  "address"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Документы",
+                "fields": [
+                  "passport_series",
+                  "passport_number",
+                  "passport_issued"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "comment"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": []
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Высоконагруженные отчеты",
+  "table": "",
+  "search": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Артикул отчета",
+      "article": "reportArticle",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "in_search": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Фильтры",
+      "article": "filters",
+      "data_type": "array",
+      "field_type": "array",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": false,
+      "in_search": false,
+      "required_permissions": [],
+      "required_modules": [],
+      "use_in_commands": [
+        "get",
+        "add"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    }
+  ]
+}

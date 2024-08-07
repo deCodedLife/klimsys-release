@@ -1,0 +1,264 @@
+{
+  "required_permissions": [],
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Виджеты",
+      "type": "analytic_widgets",
+      "size": 4,
+      "required_permissions": [
+        "director_schedule"
+      ],
+      "settings": {
+        "widgets_group": "daily_report",
+        "filters": [
+          {
+            "property": "start_at",
+            "value": ":date()"
+          },
+          {
+            "property": "end_at",
+            "value": ":date()"
+          }
+        ]
+      },
+      "components": {
+        "filters": [
+          {
+            "title": "Дата (от)",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "size": 2,
+              "is_search": false,
+              "recipient_property": "start_at"
+            }
+          },
+          {
+            "title": "Дата (до)",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "size": 2,
+              "is_search": false,
+              "recipient_property": "end_at"
+            }
+          },
+          {
+            "title": "Филиал",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "store_id",
+              "donor_object": "stores",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Группы услуг",
+      "type": "mini_list",
+      "size": 2,
+      "required_permissions": [
+        "director_schedule"
+      ],
+      "data": {
+        "limit": 0,
+        "page": 1
+      },
+      "settings": {
+        "is_edit": false,
+        "link": "serviceGroupsReport",
+        "object": "serviceGroupsReport"
+      },
+      "components": {
+        "filters": [
+          {
+            "title": "Группа услуг",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "is_clearable": false,
+              "recipient_property": "id",
+              "donor_object": "serviceGroups",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Сотрудники",
+      "type": "mini_list",
+      "size": 2,
+      "required_permissions": [
+        "director_schedule"
+      ],
+      "settings": {
+        "is_edit": false,
+        "link": "users",
+        "object": "usersReport"
+      },
+      "data": {
+        "limit": 0,
+        "page": 1
+      },
+      "components": {
+        "filters": [
+          {
+            "title": "Сотрудник",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "is_clearable": false,
+              "recipient_property": "id",
+              "donor_object": "users",
+              "donor_property_title": "fio",
+              "donor_property_value": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Расписание",
+      "type": "day_planning",
+      "size": 4,
+      "required_permissions": [
+        "doctor_schedule"
+      ],
+      "required_modules": [],
+      "settings": {
+        "object": "visits",
+        "time_from_property": "start_at",
+        "time_to_property": "end_at",
+        "status_property": "status",
+        "links_property": "clients_id"
+      },
+      "components": []
+    },
+    {
+      "title": "Расписание",
+      "type": "schedule",
+      "size": 4,
+      "required_permissions": [
+        "manager_schedule"
+      ],
+      "required_modules": [],
+      "settings": {
+        "object": "visits",
+        "row_href": "visits/add"
+      },
+      "components": {
+        "buttons": [],
+        "filters": [
+          {
+            "title": "Дата",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "recipient_property": "start_at"
+            }
+          },
+          {
+            "title": "Дата",
+            "type": "date",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "recipient_property": "end_at",
+              "is_visible": false,
+              "hook": "visits"
+            }
+          },
+          {
+            "title": "Филиал",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "is_clearable": false,
+              "recipient_property": "store_id",
+              "donor_object": "stores",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          },
+          {
+            "title": "Сотрудник",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "hook": "visits",
+              "recipient_property": "user_id",
+              "donor_object": "users",
+              "donor_property_title": "last_name",
+              "donor_property_value": "id",
+              "select": [ [ "short_fio", "last_name", "first_name", "patronymic" ] ],
+              "select_menu": [ [ "fio" ] ]
+            }
+          },
+          {
+            "title": "Клиент",
+            "type": "list",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": true,
+              "recipient_property": "clients_id",
+              "donor_object": "clients",
+              "donor_property_title": "last_name",
+              "donor_property_value": "id",
+              "select": [
+                [ "id" ],
+                [ "fio" ]
+              ],
+              "select_menu": [
+                [ "id" ],
+                [ "fio" ],
+                [ "phone", "second_phone"]
+              ]
+            }
+          },
+          {
+            "title": "Специальность",
+            "type": "list",
+            "settings": {
+              "donor_object": "professions",
+              "donor_property_title": "title",
+              "donor_property_value": "id",
+              "recipient_property": "profession_id"
+            }
+          },
+          {
+            "title": "Хочет раньше",
+            "type": "checkbox",
+            "required_permissions": [],
+            "required_modules": [],
+            "settings": {
+              "is_search": false,
+              "recipient_property": "is_earlier"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "subpages": []
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Удаление",
+  "type": "remove",
+  "object_scheme": "cronTasks",
+  "required_permissions": ["support"],
+  "required_modules": []
+}

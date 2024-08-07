@@ -1,0 +1,63 @@
+{
+  "title": "Настройки",
+  "table": "settings",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Название CRM",
+      "article": "crm_name",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update"
+      ],
+      "require_in_commands": [],
+      "is_disabled": false
+    },
+    {
+      "title": "Адрес CRM",
+      "article": "crm_url",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update"
+      ],
+      "require_in_commands": [],
+      "is_disabled": false
+    },
+    {
+      "title": "Ключ авторизации в АТС",
+      "article": "token",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update"
+      ],
+      "require_in_commands": [],
+      "is_disabled": false
+    },
+    {
+      "title": "ID папки",
+      "article": "folder_id",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update"
+      ],
+      "require_in_commands": [],
+      "is_disabled": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Роли - Доступы",
+  "properties": [
+    {
+      "title": "ID роли",
+      "article": "role_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "ID доступа",
+      "article": "permission_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": [
+    {
+      "role_id": 1,
+      "permission_id": 1
+    }
+  ]
+}

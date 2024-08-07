@@ -1,0 +1,147 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Задачи - Редактирование",
+        "title": [
+          "№ ",
+          ":id"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Табы",
+      "type": "tabs",
+      "size": 4,
+      "settings": {
+      "info": {
+          "title": "Основная информация",
+          "body": [
+            {
+              "title": "Форма",
+              "type": "form",
+              "size": 4,
+              "settings": {
+                "object": "tasks",
+                "command": "update",
+                "areas": [
+                  {
+                    "size": 2,
+                    "blocks": [
+                      {
+                        "title": "",
+                        "fields": [
+                          "author_id",
+                          "performer_id",
+                          "client_id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "size": 2,
+                    "blocks": [
+                      {
+                        "title": "",
+                        "fields": [
+                          "deadline",
+                          "notifyEvery",
+                          "status",
+                          "taskGroup_id"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "size": 4,
+                    "blocks": [
+                      {
+                        "title": "",
+                        "fields": [
+                          "description"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "components": {
+                "buttons": [
+                  {
+                    "type": "submit",
+                    "settings": {
+                      "title": "Сохранить",
+                      "background": "dark",
+                      "href": "tasks"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+      "chat":  {
+          "title": "Чат",
+          "is_counter": true,
+          "body": [
+            {
+              "title": "Чат задачи",
+              "type": "mini_chat",
+              "size": 4,
+              "hook": "taskChat",
+              "settings": {
+                "object": "taskMessages",
+                "filter_property": "task_id"
+              },
+              "components": []
+            }
+          ]
+        },
+      "logs":  {
+          "title": "Логи",
+          "body": [
+            {
+              "title": "Логи",
+              "type": "logs",
+              "size": 4,
+              "settings": {
+                "object": "logs",
+                "filters": [
+                  {
+                    "property": "table_name",
+                    "value": "tasks"
+                  },
+                  {
+                    "property": "row_id",
+                    "value": ":id"
+                  }
+                ]
+              },
+              "components": {
+                "filters": [
+                  {
+                    "title": "Дата",
+                    "type": "date",
+                    "required_permissions": [],
+                    "required_modules": [],
+                    "settings": {
+                      "recipient_property": "created_at"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+    }
+    }
+  ]
+}

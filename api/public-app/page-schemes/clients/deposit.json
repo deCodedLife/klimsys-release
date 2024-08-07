@@ -1,0 +1,65 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Заголовок",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Пополнение депозита"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Форма депозита",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "salesList",
+        "command": "add",
+        "data": {
+          "client_id": ":id",
+          "action": "deposit",
+          "online_receipt": "Y"
+        },
+        "areas": [
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "summary",
+                  "store_id",
+                  "action",
+                  "client_id",
+                  "employee_id",
+                  "online_receipt",
+                  "pay_method",
+                  "sum_cash",
+                  "sum_card"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "href": "clients",
+              "background": "dark",
+              "title": "Пополнить"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

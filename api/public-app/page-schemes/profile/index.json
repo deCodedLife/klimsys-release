@@ -1,0 +1,80 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Сотрудники - Просмотр",
+        "title": [
+          "Ваш профиль"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "users",
+        "command": "update",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "avatar",
+                  "last_name",
+                  "first_name",
+                  "patronymic",
+                  "birthday",
+                  "gender"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Доступы",
+                "fields": [
+                  "role_id",
+                  "email",
+                  "password"
+                ]
+              },
+              {
+                "title": "Контакты",
+                "fields": [
+                  "phone",
+                  "second_phone",
+                  "address"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "profile"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

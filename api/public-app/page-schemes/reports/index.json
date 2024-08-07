@@ -1,0 +1,918 @@
+{
+  "required_modules": [],
+  "required_permissions": [
+    "reports_get"
+  ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "title": [
+          "Отчеты"
+        ]
+      },
+      "components": []
+    },
+    {
+      "title": "Табы",
+      "type": "tabs",
+      "size": 4,
+      "settings": {
+        "daily_report": {
+            "title": "Суточный отчёт",
+            "body": [
+              {
+                "title": "Виджеты",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "daily_report"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Сумма",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_price"
+                      },
+                      "placeholder": "От"
+                    },
+                    {
+                      "title": "",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_price"
+                      },
+                      "placeholder": "До"
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "sum_all_services":  {
+            "title": "Продажа услуг",
+            "body": [
+              {
+                "title": "Виджет - сумма всех услуг",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "sum_all_services"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Сумма",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_price"
+                      },
+                      "placeholder": "От"
+                    },
+                    {
+                      "title": "",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_price"
+                      },
+                      "placeholder": "До"
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    },
+                    {
+                      "title": "Услуга",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": true,
+                        "recipient_property": "id",
+                        "donor_object": "services",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id",
+                        "joined_field": "category_id"
+                      }
+                    },
+                    {
+                      "title": "Группа услуг",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "category_id",
+                        "donor_object": "serviceGroups",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Список",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_edit": false,
+                  "is_infinite": true,
+                  "link": "services",
+                  "object": "serviceReports",
+                  "linked_filter": "analytic_widgets_sum_all_services"
+                },
+                "components": []
+              }
+            ]
+          },
+        "userServices":  {
+            "title": "Продажа услуг по сотрудникам",
+            "body": [
+              {
+                "title": "Виджет - сумма всех услуг",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "userServices"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "size": 2,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "size": 2,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Сумма",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "size": 2,
+                        "recipient_property": "start_price"
+                      },
+                      "placeholder": "От"
+                    },
+                    {
+                      "title": "",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "size": 2,
+                        "recipient_property": "end_price"
+                      },
+                      "placeholder": "До"
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    },
+                    {
+                      "title": "Сотрудник",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "user_id",
+                        "donor_object": "users",
+                        "donor_property_title": "last_name",
+                        "donor_property_value": "id",
+                        "select": [
+                          [
+                            "short_fio",
+                            "last_name",
+                            "first_name",
+                            "patronymic"
+                          ]
+                        ],
+                        "select_menu": [
+                          [
+                            "fio",
+                            "last_name",
+                            "first_name",
+                            "patronymic"
+                          ]
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Список",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_edit": false,
+                  "is_infinite": true,
+                  "link": "services",
+                  "size": 2,
+                  "object": "userServices",
+                  "linked_filter": "analytic_widgets_userServices"
+                },
+                "components": []
+              }
+            ]
+          },
+        "visit_clients":  {
+            "title": "Клиенты посетившие специалистов",
+            "body": [
+              {
+                "title": "Клиенты посетившие специалистов",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "visit_clients"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Сумма",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_price"
+                      },
+                      "placeholder": "От"
+                    },
+                    {
+                      "title": "",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_price"
+                      },
+                      "placeholder": "До"
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    },
+                    {
+                      "title": "Сотрудник",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "user_id",
+                        "donor_object": "users",
+                        "donor_property_title": "last_name",
+                        "donor_property_value": "id",
+                        "select": [
+                          [
+                            "short_fio",
+                            "last_name",
+                            "first_name",
+                            "patronymic"
+                          ]
+                        ],
+                        "select_menu": [
+                          [
+                            "fio",
+                            "last_name",
+                            "first_name",
+                            "patronymic"
+                          ]
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Список",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_edit": false,
+                  "link": "clients",
+                  "object": "visit_clients",
+                  "linked_filter": "analytic_widgets_visit_clients"
+                }
+              }
+            ]
+          },
+        "promotions":  {
+            "title": "Отчет по акциям",
+            "body": [
+              {
+                "title": "Список",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_edit": false,
+                  "object": "promotions"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "begin_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "stores_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "advertise_fixed":  {
+            "title": "Рекламные источники",
+            "body": [
+              {
+                "title": "Виджет - сумма всех услуг",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "is_hard": true,
+                  "widgets_group": "advertise_fixed"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Сумма",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_price"
+                      },
+                      "placeholder": "От"
+                    },
+                    {
+                      "title": "",
+                      "type": "price",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_price"
+                      },
+                      "placeholder": "До"
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    },
+                    {
+                      "title": "Рекламный источник",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "id",
+                        "donor_object": "advertise",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Список",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_edit": false,
+                  "link": "advertise",
+                  "object": "advertiseClients",
+                  "linked_filter": "analytic_widgets_advertise_fixed"
+                },
+                "components": {
+                  "buttons": [
+                    {
+                      "type": "script",
+                      "settings": {
+                        "title": "Обновить отчет",
+                        "background": "dark",
+                        "object": "reports",
+                        "command": "update",
+                        "data": {
+                          "report": "advertise"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "clientsMap":  {
+            "title": "Геолокация клиентов",
+            "body": [
+              {
+                "type": "yandex_map",
+                "size": 4,
+                "settings": {
+                  "object": "clientsMap",
+                  "filters": []
+                },
+                "components": {
+                  "filters": []
+                }
+              }
+            ]
+          },
+        "clients":  {
+            "title": "Клиенты",
+            "body": [
+              {
+                "title": "Виджет - Новые клиенты",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "clients"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата регистрации",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Дата рождения",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_ear"
+                      },
+                      "placeholder": "С"
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_ear"
+                      },
+                      "placeholder": "По"
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "userCalls":  {
+            "title": "Звонки",
+            "body": [
+              {
+                "title": "Виджет",
+                "type": "analytic_widgets",
+                "size": 4,
+                "settings": {
+                  "widgets_group": "userCalls"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "start_at"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "end_at"
+                      }
+                    },
+                    {
+                      "title": "Сотрудник",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "user_id",
+                        "donor_object": "users",
+                        "donor_property_title": "last_name",
+                        "donor_property_value": "id",
+                        "select": [
+                          [
+                            "short_fio",
+                            "last_name",
+                            "first_name",
+                            "patronymic"
+                          ]
+                        ],
+                        "select_menu": [
+                          [
+                            "fio",
+                            "last_name",
+                            "first_name",
+                            "patronymic"
+                          ]
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "visitsCancelled":  {
+            "title": "Удаленные посещения",
+            "body": [
+              {
+                "title": "Список",
+                "type": "list",
+                "size": 4,
+                "settings": {
+                  "is_edit": false,
+                  "link": false,
+                  "object": "visitsCancelled"
+                },
+                "components": {
+                  "filters": [
+                    {
+                      "title": "Дата",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "cancelledDate_start"
+                      }
+                    },
+                    {
+                      "title": "",
+                      "type": "date",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "size": 2,
+                        "is_search": false,
+                        "recipient_property": "cancelledDate_end"
+                      }
+                    },
+                    {
+                      "title": "Филиал",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "store_id",
+                        "donor_object": "stores",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    },
+                    {
+                      "title": "Причина отмены",
+                      "type": "list",
+                      "required_permissions": [],
+                      "required_modules": [],
+                      "settings": {
+                        "is_search": false,
+                        "recipient_property": "reason_id",
+                        "donor_object": "cancelReasons",
+                        "donor_property_title": "title",
+                        "donor_property_value": "id"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+        "equipmentVisitsCancelled":  {
+          "title": "Удаленные записи оборудования",
+          "body": [
+            {
+              "title": "Список",
+              "type": "list",
+              "size": 4,
+              "settings": {
+                "is_edit": false,
+                "link": false,
+                "object": "equipmentVisitsCancelled"
+              },
+              "components": {
+                "filters": [
+                  {
+                    "title": "Дата",
+                    "type": "date",
+                    "required_permissions": [],
+                    "required_modules": [],
+                    "settings": {
+                      "size": 2,
+                      "is_search": false,
+                      "recipient_property": "cancelledDate_start"
+                    }
+                  },
+                  {
+                    "title": "",
+                    "type": "date",
+                    "required_permissions": [],
+                    "required_modules": [],
+                    "settings": {
+                      "size": 2,
+                      "is_search": false,
+                      "recipient_property": "cancelledDate_end"
+                    }
+                  },
+                  {
+                    "title": "Филиал",
+                    "type": "list",
+                    "required_permissions": [],
+                    "required_modules": [],
+                    "settings": {
+                      "is_search": false,
+                      "recipient_property": "store_id",
+                      "donor_object": "stores",
+                      "donor_property_title": "title",
+                      "donor_property_value": "id"
+                    }
+                  },
+                  {
+                    "title": "Причина отмены",
+                    "type": "list",
+                    "required_permissions": [],
+                    "required_modules": [],
+                    "settings": {
+                      "is_search": false,
+                      "recipient_property": "reason_id",
+                      "donor_object": "cancelReasons",
+                      "donor_property_title": "title",
+                      "donor_property_value": "id"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "components": []
+    }
+  ]
+}

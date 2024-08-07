@@ -1,0 +1,50 @@
+{
+  "required_modules": [],
+  "required_permissions": [ "users_get" ],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Оборудование",
+        "title": [
+          "Оборудование"
+        ]
+      },
+      "components": {}
+    },
+    {
+      "title": "Список",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "object": "wearableEquipment"
+      },
+      "components": {
+        "filters": [
+          {
+            "title": "Филиал",
+            "type": "list",
+            "settings": {
+              "recipient_property": "stores_id",
+              "donor_object": "stores",
+              "donor_property_title": "title",
+              "donor_property_value": "id"
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить оборудование",
+              "background": "dark",
+              "page": "wearableEquipment/add"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

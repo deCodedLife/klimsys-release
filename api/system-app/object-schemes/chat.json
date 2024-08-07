@@ -1,0 +1,40 @@
+{
+  "title": "Чат",
+  "table": "",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Объект сообщений",
+      "article": "messages_object",
+      "data_type": "string",
+      "use_in_commands": [
+        "get",
+        "get-unread-count",
+        "read"
+      ],
+      "require_in_commands": [
+        "get-unread-count"
+      ]
+    },
+    {
+      "title": "Объект фильтра",
+      "article": "filter_object",
+      "data_type": "string",
+      "use_in_commands": [
+        "get",
+        "get-unread-count"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Значение фильтра",
+      "article": "filter_value",
+      "data_type": "string",
+      "use_in_commands": [
+        "get",
+        "get-unread-count"
+      ],
+      "require_in_commands": []
+    }
+  ]
+}

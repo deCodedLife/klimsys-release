@@ -1,0 +1,182 @@
+{
+  "title": "Услуги",
+  "table": "services",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "data_type": "string",
+      "field_type": "textarea",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Цена",
+      "article": "price",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Количество",
+      "article": "count",
+      "data_type": "integer",
+      "field_type": "integer",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "get"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Зависимая услуга",
+      "article": "depend_from",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": true,
+      "list_donor": {
+        "table": "services",
+        "properties_title": "title"
+      },
+      "use_in_commands": [
+        "update",
+        "remove",
+        "get",
+        "add"
+      ]
+    },
+    {
+      "title": "Тип услуги",
+      "article": "service_type",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "import_list": [
+        {
+          "title": "Кондиционирование",
+          "value": "conditioners"
+        },
+        {
+          "title": "Холодильные установки",
+          "value": "refrigerators"
+        },
+        {
+          "title": "Вентиляция",
+          "value": "ventilation"
+        },
+        {
+          "title": "Системы отопления",
+          "value": "heating_systems"
+        }
+      ],
+      "custom_list": [
+        {
+          "title": "Кондиционирование",
+          "value": "conditioners"
+        },
+        {
+          "title": "Холодильные установки",
+          "value": "refrigerators"
+        },
+        {
+          "title": "Вентиляция",
+          "value": "ventilation"
+        },
+        {
+          "title": "Системы отопления",
+          "value": "heating_systems"
+        }
+      ],
+      "use_in_commands": [
+        "update",
+        "get",
+        "add",
+        "import"
+      ],
+      "require_in_commands": [ "add" ]
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Посмотреть",
+        "page": [
+          "services/info/",
+          ":id"
+        ],
+        "icon": "info",
+        "background": "dark"
+      }
+    },
+    {
+      "type": "href",
+      "settings": {
+        "title": "Изменить",
+        "page": [
+          "services/update/",
+          ":id"
+        ],
+        "icon": "gear",
+        "background": "dark"
+      }
+    },
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "background": "dark",
+        "icon": "trash",
+        "object": "services",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        }
+      }
+    }
+  ]
+}

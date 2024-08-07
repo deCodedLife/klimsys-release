@@ -1,0 +1,21 @@
+{
+  "title": "Логи - Пользователи",
+  "properties": [
+    {
+      "title": "ID лога",
+      "article": "log_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "ID пользователя",
+      "article": "user_id",
+      "type": "int",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}

@@ -1,0 +1,33 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [{
+    "title": "Шапка",
+    "type": "header",
+    "size": 4,
+    "settings": {
+      "description": "Группы услуг",
+      "title": ["Группы услуг"]
+    },
+    "components": {
+      "buttons": []
+    }
+  }, {
+    "title": "Список",
+    "type": "list",
+    "size": 4,
+    "settings": {
+      "object": "serviceGroups"
+    },
+    "components": {
+      "buttons": [{
+        "type": "href",
+        "settings": {
+          "page": "serviceGroups/add",
+          "title": "Добавление группы услуг",
+          "background": "dark"
+        }
+      }]
+    }
+  }]
+}

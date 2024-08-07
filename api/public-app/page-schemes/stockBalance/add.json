@@ -1,0 +1,56 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Склад - добавление"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "stockBalance",
+        "command": "add",
+        "areas": [
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "product_id",
+                  "amount",
+                  "store_id"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "href": "stockBalance",
+              "background": "dark"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

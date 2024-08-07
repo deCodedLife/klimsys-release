@@ -1,0 +1,28 @@
+{
+  "title": "Группы доступов",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": "Y",
+      "default": null
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "varchar(255)",
+      "is_required": "N",
+      "default": null
+    },
+    {
+      "title": "ID родительской группы",
+      "article": "parent_id",
+      "type": "int",
+      "is_required": "N",
+      "default": null
+    }
+  ],
+  "rows_key": "id",
+  "rows": []
+}

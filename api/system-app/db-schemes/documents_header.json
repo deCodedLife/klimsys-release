@@ -1,0 +1,14 @@
+{
+  "title": "Блоки документов типа 'Верхний колонтитул'",
+  "properties": [
+    {
+      "title": "Тело документа",
+      "article": "document_body",
+      "type": "text",
+      "is_required": false,
+      "default": null
+    }
+  ],
+  "rows_key": "",
+  "rows": []
+}
