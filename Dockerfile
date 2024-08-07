@@ -11,7 +11,7 @@ RUN docker-php-ext-install zip && docker-php-ext-enable zip
 RUN docker-php-ext-install gd && docker-php-ext-enable gd
 RUN docker-php-ext-install pdo pdo_mysql && docker-php-ext-enable pdo_mysql
 RUN docker-php-ext-install mysqli
-ADD ./docker/php/api /var/www/klimsystems
+ADD ./api /var/www/klimsystems
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Create a new user
